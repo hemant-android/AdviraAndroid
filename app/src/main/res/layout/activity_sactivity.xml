@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_effect"
+            android:paddingStart="5dp"
+            android:paddingEnd="10dp">
+
+            <ImageView
+                android:id="@+id/iv_signup_header"
+                style="@style/txt_style_heading1l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_arrow_back_24dp" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_pd_header2"
+            style="@style/txt_style_heading4d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/rl_back"
+            android:text="Search"
+            android:textColor="@color/colorPrimaryDark" />
+
+
+        <RelativeLayout
+            android:id="@+id/rl_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginVertical="15dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/ripple_effect">
+
+            <ImageView
+                android:id="@+id/iv_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_shopping_cart_24dp"
+                app:tint="@color/colorPrimaryDark" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_cartcount"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="-25dp"
+            android:layout_toStartOf="@+id/rl_cart"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:textColor="@color/colorRed"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_header"
+        android:background="@drawable/gradient_header">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="@dimen/dimen_10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:autofillHints="Search"
+            android:background="@drawable/rounded_corner_gray" />
+
+        <EditText
+            android:id="@+id/et_search"
+            style="@style/txt_style_heading4l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/searchView"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+            android:autofillHints="@string/prompt_email"
+            android:background="@drawable/rounded_corner_gray"
+            android:drawableLeft="@drawable/ic_search_icon"
+            android:drawablePadding="@dimen/dimen_10dp"
+            android:gravity="left"
+            android:hint="@string/su_entermobileno"
+            android:inputType="text"
+            android:maxLength="10"
+            android:padding="@dimen/dimen_10dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_noitems"
+        style="@style/txt_style_heading2l"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_search"
+        android:padding="@dimen/dimen_15dp"
+        android:text="Product Not Found"
+        android:textAllCaps="false" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_noitems">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/tv_recentsearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recent Search"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:layout_margin="@dimen/dimen_5dp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rsrecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_recentsearch"
+                android:scrollbars="horizontal"
+                android:layout_marginVertical="@dimen/dimen_5dp"/>
+
+            <TextView
+                android:id="@+id/tv_mvproduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Most Viewed Products"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:layout_margin="@dimen/dimen_5dp"
+                android:layout_below="@+id/rsrecyclerView"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mvrecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_mvproduct"
+                android:scrollbars="vertical"
+                android:layout_marginVertical="@dimen/dimen_5dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mvrecyclerView"
+                android:scrollbars="vertical">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.myaccount.SubscriptionActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_carthome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_effect"
+            android:paddingLeft="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/iv_signup_header"
+                style="@style/txt_style_heading1l"
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:layout_marginHorizontal="@dimen/dimen_15dp"
+                android:layout_marginVertical="16dp"
+                android:src="@drawable/ic_arrow_back_24dp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_headerlogo"
+            style="@style/txt_style_heading1l"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_toRightOf="@id/rl_back"
+            android:layout_marginLeft="10dp"
+            android:layout_marginVertical="15dp"
+            android:src="@drawable/splash_logo"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/tv_pd_header2"
+            style="@style/txt_style_heading4d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/dimen_2dp"
+            android:layout_toRightOf="@id/iv_headerlogo"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:text="Subscription Details" />
+
+        <RelativeLayout
+            android:id="@+id/rl_addsubscription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_effect"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginVertical="15dp">
+            <ImageView
+                android:id="@+id/iv_addsubscription"
+                style="@style/txt_style_heading1l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add_circle_24dp"
+                android:tint="@color/colorPrimaryDark"
+                />
+            <!--<TextView
+                android:id="@+id/tv_addsubscription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add More"/>-->
+        </RelativeLayout>
+    </RelativeLayout>
+    <ScrollView
+        android:id="@+id/scroll_View"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/rl_carthome"
+        android:layout_marginTop="@dimen/dimen_2dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="110dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="wrap_content"
+            tools:context="com.shrikanthravi.collapsiblecalendarview.MainActivity"
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent">
+
+            <com.shrikanthravi.collapsiblecalendarview.widget.CollapsibleCalendar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:primaryColor="@color/white"
+                app:textColor="@color/colorPrimaryDark"
+                app:selectedItem_textColor="@color/colorWhite"
+                android:id="@+id/collapsibleCalendarView"
+                app:todayItem_textColor="@color/colorPrimaryDark"
+                app:todayItem_background="@drawable/circle_green_stroke_background"
+                app:selectedItem_background="@drawable/circle_green_solid_background"
+                app:buttonLeft_drawableTintColor="@color/colorPrimaryDark"
+                app:buttonRight_drawableTintColor="@color/colorPrimaryDark"
+                app:expandIconColor="@color/colorPrimaryDark"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/v_linetab0"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/main_layout"
+                android:visibility="gone"
+                android:layout_margin="@dimen/dimen_5dp"
+                android:background="@color/colorGreymidlight" />
+
+            <RelativeLayout
+                android:id="@+id/ll_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/v_linetab0"
+                android:background="@color/borderlinecolor"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:paddingHorizontal="@dimen/dimen_5dp"
+                >
+                <TextView
+                    android:id="@+id/tv_title"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="@dimen/dimen_5dp"
+                    android:textStyle="bold"
+                    android:text="Daily Subscription Tokri"/>
+
+                <TextView
+                    android:id="@+id/tv_subsperiod"
+                    style="@style/txt_style_heading5d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_title"
+                    android:paddingStart="@dimen/dimen_10dp"
+                    android:textStyle="bold"
+                    android:text=""/>
+
+                <TextView
+                    android:id="@+id/tv_subs_type"
+                    style="@style/txt_style_heading4m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_subsperiod"
+                    android:text="Regular"
+                    android:layout_marginLeft="@dimen/dimen_5dp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/button_selector"
+                    android:backgroundTint="@color/borderlinecolor"
+                    android:paddingVertical="@dimen/dimen_2dp"
+                    android:paddingHorizontal="@dimen/dimen_10dp"
+                    android:layout_margin="2dp"/>
+
+                <TextView
+                    android:id="@+id/walletamount"
+                    style="@style/txt_style_heading4l"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/editbox_selector"
+                    android:text="Rs. 2000.00"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:padding="@dimen/dimen_10dp"
+                    android:visibility="gone"
+                    android:layout_alignParentRight="true"/>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_tabdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_tab"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <View
+                    android:id="@+id/v_linetab1"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/ll_tab"
+                    android:layout_weight="3"
+                    android:layout_marginVertical="@dimen/dimen_2dp"
+                    android:background="@color/borderlinecolor" />
+
+                <View
+                    android:id="@+id/v_linetab2"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/ll_tab"
+                    android:layout_weight="0"
+                    android:background="@color/borderlinecolor"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_tab"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginHorizontal="@dimen/dimen_5dp"
+                android:layout_marginBottom="110dp"/>
+
+            <RelativeLayout
+            android:id="@+id/rl_subs_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:layout_marginHorizontal="@dimen/dimen_5dp"
+            android:layout_below="@+id/recyclerview5"
+            android:padding="@dimen/dimen_15dp"
+            android:visibility="gone"
+            android:background="@drawable/bg_corners_border_blue">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:padding="4dp"
+                android:visibility="gone"
+                android:src="@drawable/advirahealnew" />
+
+            <ImageView
+                android:id="@+id/iv_rx"
+                android:layout_width="12dp"
+                android:layout_height="18dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="-1dp"
+                android:layout_marginTop="-3dp"
+                android:layout_toEndOf="@+id/imageView"
+                android:visibility="gone"
+                android:src="@drawable/rx" />
+
+            <TextView
+                android:id="@+id/tv_productname"
+                style="@style/txt_style_heading4d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold"
+                android:layout_toRightOf="@id/imageView"
+                android:text="Daily Subscription Basket" />
+
+
+            <TextView
+                android:id="@+id/tv_pack"
+                style="@style/txt_style_heading5d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_productname"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/imageView"
+                android:text="Strip 10 Tab" />
+
+            <TextView
+                android:id="@+id/tv_mrp"
+                style="@style/txt_style_heading6d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_pack"
+                android:layout_toRightOf="@id/imageView"
+                android:layout_marginLeft="10dp"
+                android:text="Rate : ₹ "
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tv_prodid"
+                style="@style/txt_style_heading6d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_boxsize"
+                style="@style/txt_style_heading6d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_unitid"
+                style="@style/txt_style_heading6d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/tv_mrpval"
+                style="@style/txt_style_heading6d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_pack"
+                android:layout_toRightOf="@id/tv_mrp"
+                android:text="80.00"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tv_discount"
+                style="@style/txt_style_heading6m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_pack"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@+id/tv_price"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="8dp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tv_inr"
+                style="@style/txt_style_heading6d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_pack"
+                android:layout_toRightOf="@id/tv_mrpval"
+                android:text=" ₹"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tv_price"
+                style="@style/txt_style_heading6d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_pack"
+                android:layout_toRightOf="@id/tv_inr"
+                android:visibility="gone"
+                android:text="64.00" />
+
+
+            <TextView
+                android:id="@+id/tv_orderqty"
+                style="@style/txt_style_heading6d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tv_mrp"
+                android:layout_below="@id/tv_price"
+                android:layout_toRightOf="@+id/imageView"
+                android:visibility="gone"
+                android:text="Order Qty : " />
+
+            <TextView
+                android:id="@+id/tv_orderqtyval"
+                style="@style/txt_style_heading5d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_price"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:layout_toRightOf="@id/tv_orderqty"
+                android:text="10" />
+
+            <TextView
+                android:id="@+id/tv_orderqtyunit"
+                style="@style/txt_style_heading6d"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_price"
+                android:layout_toRightOf="@id/tv_orderqtyval"
+                android:layout_marginLeft="5dp"
+                android:text="Box" />
+
+
+            <TextView
+                android:id="@+id/tv_itemprice"
+                style="@style/txt_style_heading6d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tv_orderqty"
+                android:layout_below="@id/tv_orderqty"
+                android:visibility="gone"
+                android:layout_toRightOf="@+id/imageView"
+                android:text="Total Amount : ₹ " />
+
+            <TextView
+                android:id="@+id/tv_itempriceval"
+                style="@style/txt_style_heading6d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_orderqty"
+                android:layout_toRightOf="@id/tv_itemprice"
+                android:text="64.00"
+                android:visibility="gone"
+                android:textStyle="bold"/>
+
+
+            <TextView
+                android:id="@+id/tv_stock"
+                style="@style/txt_style_heading5l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/imageView"
+                android:background="@color/colorThemeDark"
+                android:paddingHorizontal="10dp"
+                android:text="In Stock"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_minqty"
+                style="@style/txt_style_heading6d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/imageView"
+                android:text="Min order : 10"
+                android:textAlignment="center"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_next"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_next"/>
+
+        </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_noitems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimen_5dp"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        >
+
+        <ImageView
+            android:id="@+id/iv_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/addsubs"/>
+
+        <TextView
+            android:id="@+id/tv_text1"
+            style="@style/txt_style_heading4l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_item"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/dimen_5dp"
+            android:text="You don’t have any active subscriptions "/>
+
+        <RelativeLayout
+            android:id="@+id/rl_tapplus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_text1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="@dimen/dimen_5dp"
+            android:background="@drawable/bg_unselected"
+            android:paddingVertical="@dimen/dimen_5dp"
+            android:paddingHorizontal="@dimen/dimen_25dp"
+            >
+
+        <TextView
+            android:id="@+id/tv_text2"
+            style="@style/txt_style_heading3l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/dimen_2dp"
+            android:textColor="@color/colorYellow"
+            android:textStyle="bold"
+            android:text="Add subscription Plan"
+            android:textAllCaps="true"
+            />
+        <TextView
+            android:id="@+id/tv_text3"
+            style="@style/txt_style_heading5l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/dimen_2dp"
+            android:textColor="@color/colorYellow"
+            android:text="By Tapping plus icon + at the top"
+            android:layout_below="@+id/tv_text2"
+            />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_item1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_text1"
+            android:layout_margin="@dimen/dimen_5dp"
+            android:visibility="gone"
+            android:src="@drawable/tapplus"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/dimen_5dp"
+        android:elevation="4dp"
+        android:layout_marginHorizontal="@dimen/dimen_10dp"
+        android:visibility="gone"
+        android:layout_above="@+id/cl_bottomfooter">
+
+        <TextView
+            android:id="@+id/tv_remove"
+            style="@style/txt_style_heading4d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginHorizontal="@dimen/dimen_10dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/dimen_25dp"
+            android:paddingVertical="@dimen/dimen_10dp"
+            android:textColor="@color/colorYellow"
+            android:background="@drawable/button_selector"
+            android:text="Update "
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:textAllCaps="false"/>
+
+        <TextView
+            android:id="@+id/tv_addmore"
+            style="@style/txt_style_heading4d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginHorizontal="@dimen/dimen_10dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/dimen_25dp"
+            android:paddingVertical="@dimen/dimen_10dp"
+            android:textColor="@color/colorYellow"
+            android:background="@drawable/button_selector"
+            android:text="Add New Product"
+            android:textStyle="bold"
+            android:textAllCaps="false"/>
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_bottomfooter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:layout_alignParentBottom="true"
+
+        >
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigatin_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:background="@drawable/drop_shadow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:itemIconSize="22dp"
+            app:elevation="8dp"
+            app:labelVisibilityMode="labeled"
+            app:itemTextColor="@color/colorPrimaryDark"
+            app:menu="@menu/bottom_navigation_menu"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

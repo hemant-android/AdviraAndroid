@@ -1,0 +1,122 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 13,
+    "identityHash": "05dbdb37025a5168782f6fddc92c54b4",
+    "entities": [
+      {
+        "tableName": "dashboardBannerList",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`database_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `banner_url` TEXT, `banner_image_name` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "database_id",
+            "columnName": "database_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bannerUrl",
+            "columnName": "banner_url",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "bannerImageName",
+            "columnName": "banner_image_name",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "database_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "productList_home",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`database_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `category_id` TEXT, `category_name` TEXT, `category_image` TEXT, `themecolordark` TEXT, `themecolorlight` TEXT, `category_header_banner` TEXT, `banners` TEXT, `products` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "database_id",
+            "columnName": "database_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "categoryId",
+            "columnName": "category_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "categoryName",
+            "columnName": "category_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "categoryImage",
+            "columnName": "category_image",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "themecolordark",
+            "columnName": "themecolordark",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "themecolorlight",
+            "columnName": "themecolorlight",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "categoryHeaderBanner",
+            "columnName": "category_header_banner",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "banners",
+            "columnName": "banners",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "products",
+            "columnName": "products",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "database_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_productList_home_category_id",
+            "unique": true,
+            "columnNames": [
+              "category_id"
+            ],
+            "createSql": "CREATE UNIQUE INDEX `index_productList_home_category_id` ON `${TABLE_NAME}` (`category_id`)"
+          }
+        ],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"05dbdb37025a5168782f6fddc92c54b4\")"
+    ]
+  }
+}

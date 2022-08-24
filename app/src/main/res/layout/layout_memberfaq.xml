@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_faqquestion"
+        style="@style/txt_style_heading4l"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_5dp"
+        android:textStyle="bold"
+        android:paddingVertical="@dimen/dimen_10dp"
+        android:textColor="@color/black"
+        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+        android:drawableRight="@drawable/ic_baseline_keyboard_arrow_up_24"
+        android:drawableTint="@color/colorBlack"
+        android:drawablePadding="@dimen/dimen_20dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_faqanswer"
+        style="@style/txt_style_heading5l"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_5dp"
+        android:layout_below="@+id/tv_faqquestion"
+        android:paddingVertical="@dimen/dimen_10dp"
+        />
+
+    <View
+        android:id="@+id/v_line2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/dimen_5dp"
+        android:layout_marginVertical="@dimen/dimen_10dp"
+        android:paddingVertical="@dimen/dimen_10dp"
+        android:background="@color/colorGreyVerylight" />
+
+</RelativeLayout>

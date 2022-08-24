@@ -1,0 +1,72 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="header1">22dp</dimen>
+    <dimen name="header2">20dp</dimen>
+    <dimen name="header3">18dp</dimen>
+    <dimen name="header4">16dp</dimen>
+    <dimen name="header5">14dp</dimen>
+    <dimen name="header6">12dp</dimen>
+    <dimen name="header7">10dp</dimen>
+    <dimen name="bottom_bar_elevation">8dp</dimen>
+
+    <dimen name="toolbar_profile_width">90dp</dimen>
+    <dimen name="activity_padding">16dp</dimen>
+    <dimen name="profile_title">23dp</dimen>
+    <dimen name="profile_desc">13dp</dimen>
+    <dimen name="meta_count">20dp</dimen>
+    <dimen name="meta_label">12dp</dimen>
+    <dimen name="ic_plus_width">28dp</dimen>
+
+    <dimen name="dimen_2dp">2dp</dimen>
+    <dimen name="dimen_3dp">3dp</dimen>
+    <dimen name="dimen_5dp">5dp</dimen>
+    <dimen name="dimen_6dp">6dp</dimen>
+
+    <dimen name="dimen_7dp">7dp</dimen>
+    <dimen name="dimen_8dp">8dp</dimen>
+    <dimen name="dimen_10dp">10dp</dimen>
+    <dimen name="dimen_11dp">11dp</dimen>
+    <dimen name="dimen_12dp">12dp</dimen>
+    <dimen name="dimen_13dp">13dp</dimen>
+    <dimen name="dimen_14dp">14dp</dimen>
+    <dimen name="dimen_16dp">16dp</dimen>
+
+    <dimen name="dimen_15dp">15dp</dimen>
+    <dimen name="dimen_17dp">17dp</dimen>
+
+    <dimen name="dimen_18dp">18dp</dimen>
+    <dimen name="dimen_20dp">20dp</dimen>
+    <dimen name="dimen_25dp">25dp</dimen>
+    <dimen name="dimen_30dp">30dp</dimen>
+    <dimen name="dimen_35dp">35dp</dimen>
+    <dimen name="dimen_40dp">40dp</dimen>
+    <dimen name="dimen_45dp">45dp</dimen>
+
+
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="dp_16">16dp</dimen>
+    <dimen name="dp_24">24dp</dimen>
+    <dimen name="dp_32">32dp</dimen>
+    <dimen name="dp_40">40dp</dimen>
+    <dimen name="dp_48">48dp</dimen>
+    <dimen name="dp_56">56dp</dimen>
+    <dimen name="dp_64">64dp</dimen>
+    <dimen name="dp_72">72dp</dimen>
+    <dimen name="dp_80">80dp</dimen>
+    <dimen name="dp_160">160dp</dimen>
+
+    <dimen name="md_bottom_sheet_separator_top_margin">7dp</dimen>
+
+    <integer name="grid_span_1">1</integer>
+    <integer name="grid_span_2">2</integer>
+    <integer name="grid_span_3">3</integer>
+    <dimen name="list_item_spacing">16dp</dimen>
+    <dimen name="list_item_spacing_half">8dp</dimen>
+
+
+</resources>

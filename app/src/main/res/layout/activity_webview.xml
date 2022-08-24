@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.WebViewActivity">
+    <RelativeLayout
+        android:id="@+id/rl_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_effect"
+            android:paddingLeft="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/iv_signup_header"
+                style="@style/txt_style_heading1l"
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:layout_marginHorizontal="@dimen/dimen_15dp"
+android:layout_marginVertical="16dp"
+android:src="@drawable/ic_arrow_back_24dp" />
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/iv_rx"
+            android:layout_width="12dp"
+            android:layout_height="18dp"
+            android:src="@drawable/rx"
+            android:layout_marginVertical="15dp"
+            android:layout_toRightOf="@id/rl_back"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/tv_signup_header2"
+            style="@style/txt_style_heading4l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/dimen_2dp"
+            android:layout_toRightOf="@id/iv_rx"
+            android:textColor="@color/colorPrimaryDark"/>
+
+
+    </RelativeLayout>
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_signup"
+        android:id="@+id/webView" />
+
+</RelativeLayout>

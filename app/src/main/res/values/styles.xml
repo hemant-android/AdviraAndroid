@@ -1,0 +1,218 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorStatusbar</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+        <item name="actionBarStyle">@style/ActionBarStyle</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <style name="ActionBarStyle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="android:titleTextStyle">@style/TitleBarTextColor</item>
+    </style>
+    <style name="TitleBarTextColor" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="txt_style_heading1l" parent="android:style/Widget.TextView">
+        <item name="android:fontFamily">Montserrat</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/colorGreylight</item>
+
+    </style>
+
+    <style name="txt_style_heading2l" parent="android:style/Widget.TextView">
+        <item name="android:fontFamily">Montserrat</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/colorGreylight</item>
+    </style>
+
+
+    <style name="txt_style_heading3l" parent="android:style/Widget.TextView">
+        <item name="android:fontFamily">Montserrat</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">@color/colorGreylight</item>
+    </style>
+
+    <style name="txt_style_heading4l" parent="android:style/Widget.TextView">
+        <item name="android:fontFamily">Montserrat</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/colorGreylight</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="txt_style_heading5l" parent="android:style/Widget.TextView">
+        <item name="android:fontFamily">Montserrat</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/colorGreylight</item>
+    </style>
+
+    <style name="txt_style_heading6l" parent="android:style/Widget.TextView">
+        <item name="android:fontFamily">Montserrat</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/colorGreylight</item>
+    </style>
+
+    <style name="txt_style_heading1m" parent="android:style/Widget.TextView">
+        <item name="android:fontFamily">Montserrat</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/colorThemeMid</item>
+
+    </style>
+
+    <style name="txt_style_heading2m" parent="android:style/Widget.TextView">
+        <item name="android:fontFamily">Montserrat</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/colorThemeMid</item>
+    </style>
+
+
+    <style name="txt_style_heading3m" parent="android:style/Widget.TextView">
+        <item name="android:fontFamily">Montserrat</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">@color/colorThemeMid</item>
+    </style>
+
+    <style name="txt_style_heading4m" parent="android:style/Widget.TextView">
+        <item name="android:fontFamily">Montserrat</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/colorThemeMid</item>
+    </style>
+
+    <style name="txt_style_heading5m" parent="android:style/Widget.TextView">
+        <item name="android:fontFamily">Montserrat</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/colorThemeMid</item>
+    </style>
+
+    <style name="txt_style_heading6m" parent="android:style/Widget.TextView">
+        <item name="android:fontFamily">Montserrat</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/colorThemeMid</item>
+    </style>
+
+
+    <style name="txt_style_heading1d" parent="android:style/Widget.TextView">
+        <item name="android:fontFamily">Montserrat</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+
+    </style>
+
+    <style name="txt_style_heading2d" parent="android:style/Widget.TextView">
+        <item name="android:fontFamily">Montserrat</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+
+    <style name="txt_style_heading3d" parent="android:style/Widget.TextView">
+        <item name="android:fontFamily">Montserrat</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="txt_style_heading4d" parent="android:style/Widget.TextView">
+        <item name="android:fontFamily">Montserrat</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="txt_style_heading5d" parent="android:style/Widget.TextView">
+        <item name="android:fontFamily">Montserrat</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="txt_style_heading6d" parent="android:style/Widget.TextView">
+        <item name="android:fontFamily">Montserrat</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="Label">
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:background">#44FFFFFF</item>
+        <item name="android:fontFamily">sans-serif-thin</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/txt_style_heading3d</item>
+        <item name="tabSelectedTextColor">@android:color/holo_green_dark</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/colorGreylight</item>
+        <item name="colorControlActivated">@color/colorGolden</item>
+    </style>
+
+    <style name="txt_style_sequencetitle" parent="android:style/Widget.TextView">
+        <item name="android:fontFamily">Montserrat</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="txt_style_sequencesubtitle" parent="android:style/Widget.TextView">
+        <item name="android:fontFamily">Montserrat</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/colorGreymidlight</item>
+    </style>
+
+
+    <style name="txt_style_sequencetitlenormal" parent="android:style/Widget.TextView">
+        <item name="android:fontFamily">Montserrat</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="txt_style_sequencesubtitlenormal" parent="android:style/Widget.TextView">
+        <item name="android:fontFamily">Montserrat</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/colorGreymidlight</item>
+    </style>
+
+    <style name="SubmitPaymentMethodDetailsButton">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:background">@drawable/green_button</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="PaymentOptionsTextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">#FFFFFF</item>
+    </style>
+
+</resources>

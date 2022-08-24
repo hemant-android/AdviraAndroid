@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.subscrption.AddSubscription">
+
+    <RelativeLayout
+        android:id="@+id/rl_carthome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_effect"
+            android:paddingLeft="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/iv_signup_header"
+                style="@style/txt_style_heading1l"
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:layout_marginHorizontal="@dimen/dimen_15dp"
+                android:layout_marginVertical="16dp"
+                android:src="@drawable/ic_arrow_back_24dp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_headerlogo"
+            style="@style/txt_style_heading1l"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_toRightOf="@id/rl_back"
+            android:layout_marginLeft="10dp"
+            android:layout_marginVertical="15dp"
+            android:src="@drawable/splash_logo"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/tv_pd_header2"
+            style="@style/txt_style_heading4d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/dimen_2dp"
+            android:layout_toRightOf="@id/iv_headerlogo"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:text="Add Subscription" />
+
+        <RelativeLayout
+            android:id="@+id/rl_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_effect"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:visibility="gone"
+            android:layout_marginVertical="15dp">
+            <ImageView
+                android:id="@+id/iv_search"
+                style="@style/txt_style_heading1l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_search_24dp"
+                android:tint="@color/colorPrimaryDark"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_carthome"
+        android:layout_marginBottom="110dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_15dp"
+                    android:background="@color/white"
+                    android:clipToPadding="true"
+                    app:cardCornerRadius="5dp"
+                    android:elevation="3dp"
+                    app:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/ll_tab"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorWhite"
+                            android:orientation="horizontal"
+                            android:paddingVertical="5dp"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            android:layout_below="@+id/ll_tab3"
+                            android:weightSum="2">
+
+                            <RelativeLayout
+                                android:id="@+id/rl_startdate"
+                                style="@style/txt_style_heading5d"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:layout_margin="@dimen/dimen_5dp"
+                                android:textAlignment="center"
+                                android:textStyle="bold" >
+
+                                <ImageView
+                                    android:id="@+id/iv_calander"
+                                    android:layout_width="@dimen/dp_40"
+                                    android:layout_height="@dimen/dp_40"
+                                    android:layout_marginStart="@dimen/dimen_15dp"
+                                    android:src="@drawable/ic_calender_24dp"/>
+
+                                <TextView
+                                    android:id="@+id/tv_sdate"
+                                    style="@style/txt_style_heading4l"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/iv_calander"
+                                    android:text="Start Date"
+                                    android:textAllCaps="true"
+                                    android:textStyle="bold"
+                                   android:gravity="center"
+                                    android:textColor="@color/colorGrey"/>
+
+                                <TextView
+                                    android:id="@+id/tv_dateval"
+                                    style="@style/txt_style_heading5l"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_sdate"
+                                    android:layout_toRightOf="@+id/iv_calander"
+                                    android:gravity="center"
+                                    android:text="27 Jan, 2022"/>
+
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/v_line2"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorGreymidlight"
+                            android:layout_below="@+id/ll_tab3"
+                            android:layout_marginHorizontal="@dimen/dimen_5dp"/>
+
+                        <LinearLayout
+                            android:id="@+id/ll_tab1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ll_tab"
+                            android:background="@color/colorWhite"
+                            android:orientation="horizontal"
+                            android:paddingVertical="5dp"
+                            android:visibility="gone"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            android:weightSum="2">
+
+                            <RelativeLayout
+                                android:id="@+id/rl_EndDate"
+                                style="@style/txt_style_heading5d"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="Membership "
+                                android:layout_margin="@dimen/dimen_5dp"
+                                android:textAlignment="center"
+                                android:textStyle="bold">
+
+                                <ImageView
+                                    android:id="@+id/iv_calander1"
+                                    android:layout_width="@dimen/dp_40"
+                                    android:layout_height="@dimen/dp_40"
+                                    android:layout_marginStart="@dimen/dimen_15dp"
+                                    android:src="@drawable/ic_calender_24dp"/>
+
+                                <TextView
+                                    android:id="@+id/tv_edate"
+                                    style="@style/txt_style_heading4l"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="End Date"
+                                    android:textAllCaps="true"
+                                    android:textStyle="bold"
+                                    android:layout_toRightOf="@+id/iv_calander1"
+                                    android:gravity="center"
+                                    android:layout_centerHorizontal="true"/>
+
+                                <TextView
+                                    android:id="@+id/tv_edateval"
+                                    style="@style/txt_style_heading5l"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_edate"
+                                    android:gravity="center"
+                                    android:layout_toRightOf="@+id/iv_calander1"
+                                    android:text="27 Jan, 2022" />
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/v_line3"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorGreymidlight"
+                            android:layout_below="@+id/ll_tab"
+                            android:layout_marginHorizontal="@dimen/dimen_5dp"/>
+
+                        <LinearLayout
+                            android:id="@+id/ll_tab2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorWhite"
+                            android:orientation="vertical"
+                            android:paddingVertical="5dp"
+                            android:visibility="gone"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            >
+
+                        <RelativeLayout
+                            android:id="@+id/rl_deliverymode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/txt_style_heading5d"
+                            android:textAlignment="center"
+                            android:background="@color/white"
+                            android:textStyle="bold">
+
+                            <TextView
+                                android:id="@+id/tv_deliverymode"
+                                style="@style/txt_style_heading5l"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Delivery Frequency"
+                                android:textAllCaps="true"
+                                android:textStyle="bold"
+                                android:layout_marginStart="@dimen/dimen_15dp"
+                                android:textColor="@color/black"/>
+
+                            <Spinner
+                                android:id="@+id/spn_deliveryval"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_deliverymode"
+                                android:layout_marginHorizontal="@dimen/dimen_15dp"
+                                android:layout_marginTop="@dimen/dimen_5dp"
+                                android:layout_marginBottom="@dimen/dimen_10dp"
+                                />
+
+                        </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_tab3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorWhite"
+                            android:orientation="vertical"
+                            android:paddingVertical="5dp"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            >
+
+                            <RelativeLayout
+                                android:id="@+id/rl_deliveryfreq"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                style="@style/txt_style_heading5d"
+                                android:textAlignment="center"
+                                android:background="@color/white"
+                                android:textStyle="bold">
+
+                                <TextView
+                                    android:id="@+id/tv_deliveryfreq"
+                                    style="@style/txt_style_heading5l"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Delivery Frequency"
+                                    android:textAllCaps="true"
+                                    android:textStyle="bold"
+                                    android:layout_marginStart="@dimen/dimen_15dp"
+                                    android:textColor="@color/black"/>
+
+                                <RadioGroup
+                                    android:id="@+id/rg_delimode"
+                                    style="@style/txt_style_heading4d"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_deliveryfreq"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal"
+                                    android:layout_marginHorizontal="@dimen/dimen_10dp"
+                                    android:weightSum="1">
+
+                                    <RadioButton
+                                        android:id="@+id/rb_regular"
+                                        style="@style/txt_style_heading4d"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="left"
+                                        android:layout_weight="0.5"
+                                        android:checked="false"
+                                        android:text="Regular" />
+
+                                    <RadioButton
+                                        android:id="@+id/rb_custom"
+                                        style="@style/txt_style_heading4d"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="right"
+                                        android:layout_weight="0.5"
+                                        android:checked="false"
+                                        android:text="Custom" />
+                                </RadioGroup>
+
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:id="@+id/rl_gonext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/txt_style_heading5d"
+                    android:layout_below="@+id/cv_tab"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_selector"
+                    >
+
+                    <TextView
+                        android:id="@+id/iv_gonext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dimen_10dp"
+                        android:text="Add Product"
+                        android:textColor="@color/colorYellow"
+                        android:textStyle="bold"
+                        android:tint="@color/white" />
+                </RelativeLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_gonext"
+                android:layout_marginHorizontal="@dimen/dimen_5dp"
+                android:layout_marginTop="@dimen/dimen_5dp" />
+
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/dimen_5dp"
+        android:elevation="4dp"
+        android:layout_marginHorizontal="@dimen/dimen_10dp"
+        android:visibility="gone"
+        android:layout_above="@+id/cl_bottomfooter">
+
+        <TextView
+            android:id="@+id/tv_footertotal"
+            style="@style/txt_style_heading5l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/colorYellow"
+            android:layout_marginLeft="15dp"
+            android:text=""
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_footertotalitem"
+            style="@style/txt_style_heading5l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/tv_footertotal"
+            android:textColor="@color/colorYellow"
+            android:layout_marginLeft="15dp"
+            android:text=""
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_next"
+            style="@style/txt_style_heading4d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginHorizontal="@dimen/dimen_10dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:padding="@dimen/dimen_10dp"
+            android:textColor="@color/colorYellow"
+            android:background="@drawable/button_selector"
+            android:text="Next"
+            android:textStyle="bold"
+            android:textAllCaps="false"/>
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_bottomfooter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigatin_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:background="@drawable/drop_shadow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:itemIconSize="22dp"
+            app:elevation="8dp"
+            app:labelVisibilityMode="labeled"
+            app:itemTextColor="@color/colorPrimaryDark"
+            app:menu="@menu/bottom_navigation_menu"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

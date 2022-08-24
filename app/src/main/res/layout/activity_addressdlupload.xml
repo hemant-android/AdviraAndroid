@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.registration.DocumentUploadActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_docupload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_effect"
+            android:paddingLeft="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/iv_signup_header"
+                style="@style/txt_style_heading1l"
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:layout_marginHorizontal="@dimen/dimen_15dp"
+                android:layout_marginVertical="16dp"
+                android:src="@drawable/ic_arrow_back_24dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_docupload_header2"
+            style="@style/txt_style_heading4d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/dimen_2dp"
+            android:layout_toRightOf="@id/rl_back"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="Drug License Upload" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_docuploadmain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_docupload"
+        android:layout_marginHorizontal="25dp">
+
+
+        <ScrollView
+            android:id="@+id/rl_docupload2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat">
+
+                <TextView
+                    android:id="@+id/content_anyother"
+                    style="@style/txt_style_heading5d"
+                    android:textColor="@color/colorGrey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="\nPlease upload Drug License document, either JPEG File or PNG File to activate your address" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_heade2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/content_anyother">
+
+                    <LinearLayout
+                        android:id="@+id/ll_upload1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+                            <ImageView
+                                android:id="@+id/img_upload1"
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_weight="1"
+                                android:src="@drawable/add_image" />
+                            <Button
+                                android:id="@+id/btn_upload1"
+                                style="@style/txt_style_heading6d"
+                                android:layout_width="80dp"
+                                android:layout_height="30dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_below="@id/img_upload1"
+                                android:background="@drawable/button_selector_corner"
+                                android:text="Upload"
+                                android:textColor="@color/colorWhite"/>
+
+                        </RelativeLayout>
+
+
+                        <Button
+                            android:id="@+id/btn_add1"
+                            style="@style/txt_style_heading6d"
+                            android:layout_width="75dp"
+                            android:layout_height="70dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="25dp"
+                            android:background="@drawable/bg_corners_border_dotted_blue"
+                            android:text="+" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="invisible"
+                            android:layout_weight="1">
+                            <ImageView
+                                android:id="@+id/img_upload2"
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_weight="1"
+                                android:src="@drawable/add_image" />
+                            <Button
+                                android:id="@+id/btn_upload2"
+                                style="@style/txt_style_heading6d"
+                                android:layout_width="80dp"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_below="@id/img_upload2"
+                                android:background="@drawable/button_selector_corner"
+                                android:text="Upload"
+                                android:textColor="@color/colorWhite" />
+
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/btn_add2"
+                            style="@style/txt_style_heading6d"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="5dp"
+                            android:visibility="gone"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="25dp"
+                            android:background="@drawable/bg_corners_border_dotted_blue"
+                            android:text="+" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="invisible"
+                            android:layout_weight="1">
+                            <ImageView
+                                android:id="@+id/img_upload3"
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_weight="1"
+                                android:src="@drawable/add_image" />
+                            <Button
+                                android:id="@+id/btn_upload3"
+                                style="@style/txt_style_heading6d"
+                                android:layout_width="80dp"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_below="@id/img_upload3"
+                                android:background="@drawable/button_selector_corner"
+                                android:text="Upload"
+                                android:textColor="@color/colorWhite" />
+
+                        </RelativeLayout>
+
+
+
+                        <Button
+                            android:id="@+id/btn_add3"
+                            style="@style/txt_style_heading6d"
+                            android:layout_width="75dp"
+                            android:layout_height="70dp"
+                            android:layout_marginTop="15dp"
+                            android:visibility="gone"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="25dp"
+                            android:background="@drawable/bg_corners_border_dotted_blue"
+                            android:text="+" />
+
+
+
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_upload"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_below="@id/ll_upload1"
+                        android:layout_marginHorizontal="5dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="invisible"
+                            android:layout_weight="1">
+                            <ImageView
+                                android:id="@+id/img_upload4"
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_weight="1"
+                                android:src="@drawable/add_image" />
+                            <Button
+                                android:id="@+id/btn_upload4"
+                                style="@style/txt_style_heading6d"
+                                android:layout_width="80dp"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_below="@id/img_upload4"
+                                android:background="@drawable/button_selector_corner"
+                                android:text="Upload"
+                                android:textColor="@color/colorWhite"/>
+
+                        </RelativeLayout>
+
+
+
+                        <Button
+                            android:id="@+id/btn_add4"
+                            style="@style/txt_style_heading6d"
+                            android:layout_width="75dp"
+                            android:layout_height="70dp"
+                            android:layout_marginTop="15dp"
+                            android:visibility="gone"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="25dp"
+                            android:background="@drawable/bg_corners_border_dotted_blue"
+                            android:text="+" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="invisible"
+                            android:layout_weight="1">
+                            <ImageView
+                                android:id="@+id/img_upload5"
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_weight="1"
+                                android:src="@drawable/add_image" />
+                            <Button
+                                android:id="@+id/btn_upload5"
+                                style="@style/txt_style_heading6d"
+                                android:layout_width="80dp"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_below="@id/img_upload5"
+                                android:background="@drawable/button_selector_corner"
+                                android:text="Upload"
+                                android:textColor="@color/colorWhite" />
+
+                        </RelativeLayout>
+
+
+
+                        <Button
+                            android:id="@+id/btn_add5"
+                            style="@style/txt_style_heading6d"
+                            android:layout_width="75dp"
+                            android:layout_height="70dp"
+                            android:layout_marginTop="15dp"
+                            android:visibility="gone"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="25dp"
+                            android:background="@drawable/bg_corners_border_dotted_blue"
+                            android:text="+" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="invisible"
+                            android:layout_weight="1">
+                            <ImageView
+                                android:id="@+id/img_upload6"
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_weight="1"
+                                android:src="@drawable/add_image" />
+                            <Button
+                                android:id="@+id/btn_upload6"
+                                style="@style/txt_style_heading6d"
+                                android:layout_width="80dp"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_below="@id/img_upload6"
+                                android:background="@drawable/button_selector_corner"
+                                android:text="Upload"
+                                android:textColor="@color/colorWhite" />
+
+                        </RelativeLayout>
+
+
+
+                        <Button
+                            android:id="@+id/btn_add6"
+                            style="@style/txt_style_heading6d"
+                            android:visibility="gone"
+                            android:layout_width="75dp"
+                            android:layout_height="70dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="15dp"
+                            android:textSize="25dp"
+                            android:background="@drawable/bg_corners_border_dotted_blue"
+                            android:text="+" />
+
+
+                        
+                    </LinearLayout>
+
+
+                    <!-- endregion -->
+
+
+
+                    <Button
+                        android:id="@+id/btn_submit"
+                        style="@style/txt_style_heading3d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/button_selector"
+                        android:layout_below="@id/ll_upload"
+                        android:text="Submit"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

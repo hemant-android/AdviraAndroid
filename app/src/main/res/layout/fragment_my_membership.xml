@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.myaccount.MembershipActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_membership"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@drawable/gradient_header">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_effect"
+            android:paddingLeft="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/iv_signup_header"
+                style="@style/txt_style_heading1l"
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:layout_marginHorizontal="@dimen/dimen_15dp"
+                android:layout_marginVertical="16dp"
+                android:src="@drawable/ic_arrow_back_24dp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_headerlogo"
+            style="@style/txt_style_heading1l"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_toRightOf="@id/rl_back"
+            android:layout_marginLeft="10dp"
+            android:layout_marginVertical="15dp"
+            android:src="@drawable/splash_logo"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/tv_pd_header2"
+            style="@style/txt_style_heading4d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/dimen_2dp"
+            android:layout_toRightOf="@id/iv_headerlogo"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:text="Advira Elite Green" />
+
+        <RelativeLayout
+            android:id="@+id/rl_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_effect"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginVertical="15dp">
+            <ImageView
+                android:id="@+id/iv_search"
+                style="@style/txt_style_heading1l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@color/colorPrimaryDark"
+                android:src="@drawable/ic_search_button_select" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/v_line2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:elevation="@dimen/dimen_2dp"
+        android:layout_below="@id/rl_membership"
+        android:background="@color/colorGreyVerylight" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="65dp"
+        android:layout_below="@+id/v_line2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rl_myacc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_5dp"
+                android:background="@drawable/gradient_header">
+
+                <RelativeLayout
+                    android:id="@+id/rl_myacc2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/rl_personaledit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/profile_image"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/ripple_effect"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/iv_personaledit"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:paddingHorizontal="4dp"
+                            android:src="@drawable/ic_edit_black_icon_profile" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/image_frame"
+                        android:layout_width="175dp"
+                        android:layout_height="175dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/memlogo_1"
+                        />
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_image"
+                        android:layout_width="105dp"
+                        android:layout_height="108dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="22dp"
+                        android:src="@drawable/image_not_available"
+                        app:civ_border_color="@color/colorThemeDark"
+                        android:visibility="gone"
+                        app:civ_border_width="2dp" />
+
+                    <ImageView
+                        android:id="@+id/img_add"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignEnd="@+id/profile_image"
+                        android:layout_alignBottom="@+id/profile_image"
+                        android:src="@drawable/add_profilepic"
+                        android:visibility="gone"
+                        android:tint="@color/colorBlack"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_username"
+                    style="@style/txt_style_heading3d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_myacc2"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/tv_membershipdes"
+                    style="@style/txt_style_heading2d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_username"
+                    android:layout_centerHorizontal="true"
+                    android:padding="@dimen/dimen_5dp"
+                    android:visibility="gone"
+                    android:text="Unlimited membership"/>
+
+                <TextView
+                    android:id="@+id/tv_expiry"
+                    style="@style/txt_style_heading5d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_membershipdes"
+                    android:layout_centerHorizontal="true"
+                    android:padding="@dimen/dimen_5dp"
+                    android:textStyle="bold"
+                    android:text=""/>
+
+                <ImageView
+                    android:id="@+id/sample_image"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/dimen_30dp"
+                    android:src="@drawable/splash_logo"
+                    android:layout_below="@+id/rl_myacc2"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_below="@+id/sample_image"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:layout_marginHorizontal="@dimen/dimen_25dp"
+                    android:visibility="gone"/>
+
+                <RelativeLayout
+                    android:id="@+id/ll_mobileview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_username"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="10dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_mobile"
+                        style="@style/txt_style_heading5d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="82888888888"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_mobileverifychk"
+                        style="@style/txt_style_heading5d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_toRightOf="@id/tv_mobile"
+                        android:drawableStart="@drawable/ic_verified_icon"
+                        android:drawablePadding="2dp"
+                        android:text="Verified"
+                        android:textColor="#00973d" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ll_emailview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_mobileview"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="10dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_emailviewval"
+                        style="@style/txt_style_heading5d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_emailverifychk"
+                        style="@style/txt_style_heading5d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_toRightOf="@id/tv_emailviewval" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_emailview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_mobileview"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="10dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/et_email"
+                        style="@style/txt_style_heading5d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_emailverify"
+                        style="@style/txt_style_heading5d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_toRightOf="@+id/et_email" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_citypin"
+                    style="@style/txt_style_heading5d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_mobileview"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="gone"
+                    android:drawableStart="@drawable/ic_location_on_black_24dp"
+                    android:text="" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_expiry"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:padding="@dimen/dimen_5dp"
+                    android:visibility="gone"
+                    android:background="@drawable/border_grey_color_transparent"
+                    android:backgroundTint="@color/borderlinecolor">
+
+                    <TextView
+                        android:id="@+id/tv_profile"
+                        style="@style/txt_style_heading5d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:textStyle="bold"
+                        android:text="Membership Expire in" />
+
+                    <com.white.progressview.HorizontalProgressView
+                        android:id="@+id/hp_profileper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_below="@id/tv_profile"
+                        android:padding="5dp"
+                        app:progressNormalSize="4dp"
+                        android:background="@drawable/border_grey_color_transparent"
+                        app:progressReachColor="@color/colorThemeDark"
+                        app:progressReachSize="4dp"
+                        app:progressTextColor="@color/colorBlack"
+                        app:progressTextSize="10dp"
+                        app:progressTextVisible="false" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_fragments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_myacc"
+                >
+
+                <TextView
+                    android:id="@+id/tv_benefits"
+                    style="@style/txt_style_heading5l"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_5dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:text="----Enjoy Benefits on Membership----"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_5dp"
+                    android:visibility="gone"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"/>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_showbalance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_5dp"
+                    android:layout_below="@+id/tv_benefits"
+                    android:clipToPadding="true"
+                    app:cardCornerRadius="5dp"
+                    app:cardUseCompatPadding="true">
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/viewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:clipToPadding="false"
+                        />
+                    <me.relex.circleindicator.CircleIndicator
+                        android:id="@+id/indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="bottom"
+                        android:paddingBottom="10dp"
+                        android:layout_above="@+id/rl_footer"
+                        android:paddingTop="@dimen/dimen_10dp"
+                        app:ci_drawable="@drawable/seleted"
+                        app:ci_drawable_unselected="@drawable/unselected"
+                        app:ci_height="5dp"
+                        app:ci_width="5dp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_content1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_fragments">
+
+                <TextView
+                    android:id="@+id/tv_memplan"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:textStyle="bold"
+                    android:text="Membership Plans : "
+                    android:visibility="gone"
+                    android:padding="@dimen/dimen_10dp"
+                    android:textColor="@color/black"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_benefit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:layout_marginHorizontal="@dimen/dimen_10dp"
+                    android:visibility="gone"
+                    android:layout_below="@+id/tv_memplan"/>
+                <FrameLayout
+                    android:id="@+id/framelayout_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:layout_marginHorizontal="@dimen/dimen_10dp"
+                    android:visibility="gone"
+                    android:layout_below="@+id/tv_memplan"/>
+
+                <TextView
+                    android:id="@+id/tv_faqs"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rv_benefit"
+                    android:textStyle="bold"
+                    android:text="FAQs"
+                    android:padding="@dimen/dimen_10dp"
+                    android:textColor="@color/black"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_faq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_faqs"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:layout_marginHorizontal="@dimen/dimen_5dp"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_content2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_below="@+id/rl_content1">
+
+                <TextView
+                    android:id="@+id/tv_tac"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/dimen_18dp"
+                    android:text="Term and Conditions"
+                    android:drawableEnd="@drawable/ic_arrow_right_blue_24dp"
+                    android:drawableTint="@color/colorPrimaryDark"
+                    android:padding="@dimen/dimen_15dp"
+                    android:textColor="@color/colorPrimaryDark"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/btn_buynow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingVertical="@dimen/dimen_5dp"
+        android:elevation="4dp"
+        android:layout_marginHorizontal="@dimen/dimen_10dp"
+        android:layout_marginVertical="@dimen/dimen_10dp"
+        android:background="@drawable/button_selector"
+        >
+
+        <TextView
+            android:id="@+id/tv_footertotal"
+            style="@style/txt_style_heading5l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/colorYellow"
+            android:layout_marginLeft="15dp"
+            android:text=""
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/tv_footertotalitem"
+            style="@style/txt_style_heading5l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/tv_footertotal"
+            android:textColor="@color/colorYellow"
+            android:layout_marginLeft="15dp"
+            android:text=""
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/tv_buyplan"
+            style="@style/txt_style_heading4d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginHorizontal="@dimen/dimen_10dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:padding="@dimen/dimen_5dp"
+            android:textColor="@color/colorYellow"
+            android:text="Choose Your Plan"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingVertical="@dimen/dimen_5dp"
+        android:elevation="4dp"
+        android:visibility="gone"
+        android:layout_marginHorizontal="@dimen/dimen_10dp"
+        android:layout_marginVertical="@dimen/dimen_10dp"
+        android:background="@drawable/button_selector"
+        >
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            style="@style/txt_style_heading4d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginHorizontal="@dimen/dimen_10dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:padding="@dimen/dimen_5dp"
+            android:textColor="@color/colorYellow"
+            android:text="Cancel Membership"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_renew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingVertical="@dimen/dimen_5dp"
+        android:elevation="4dp"
+        android:visibility="gone"
+        android:layout_marginHorizontal="@dimen/dimen_10dp"
+        android:layout_marginVertical="@dimen/dimen_10dp"
+        android:background="@drawable/button_selector"
+        >
+
+        <TextView
+            android:id="@+id/tv_renew"
+            style="@style/txt_style_heading4d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginHorizontal="@dimen/dimen_10dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:padding="@dimen/dimen_5dp"
+            android:textColor="@color/colorYellow"
+            android:text="Renew Membership"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

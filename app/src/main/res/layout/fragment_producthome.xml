@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <EditText
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:background="@drawable/rounded_corner_gray"
+            android:drawableStart="@drawable/ic_search_icon"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/colorGreymidlight"
+            android:hint="Search"
+            android:padding="5dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_delivpinto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_search"
+        android:background="@color/buttonpbgcolorlight"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="7dp"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:id="@+id/iv_deliv"
+            style="@style/txt_style_heading1l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:tint="@color/colorBlack"
+            android:src="@drawable/ic_location_on_black_24dp" />
+
+        <TextView
+            android:id="@+id/tv_deliverto"
+            style="@style/txt_style_heading6d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/iv_deliv"
+            android:drawableTint="@color/colorBlack"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"/>
+        <ImageView
+            android:id="@+id/iv_delivto2"
+            style="@style/txt_style_heading1l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_deliverto"
+            android:layout_marginTop="3dp"
+            android:tint="@color/colorBlack"
+            android:src="@drawable/ic_arrow_down_blue_24dp" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_delivpinto">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:textStyle="bold"
+                style="@style/txt_style_heading4d"
+                android:visibility="gone"
+                android:text="Products Category"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/categoryrecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_category"
+                android:layout_marginHorizontal="@dimen/dimen_10dp"
+                android:scrollbars="none" />
+
+            <com.synnapps.carouselview.CarouselView
+                android:id="@+id/customCarouselView"
+                android:layout_width="match_parent"
+                android:layout_below="@id/categoryrecyclerView"
+                android:layout_height="150dp"
+                android:layout_margin="@dimen/dimen_10dp"
+                app:autoPlay="true"
+                app:disableAutoPlayOnUserInteraction="true"
+                app:fillColor="@color/colorThemeDark"
+                app:pageColor="#00000000"
+                app:radius="6dp"
+                app:strokeColor="#FF777777"
+                app:strokeWidth="1dp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_f2b"
+                android:layout_below="@+id/rl_manualrecyclerview"
+                android:layout_marginHorizontal="@dimen/dimen_10dp"
+                android:layout_marginVertical="@dimen/dimen_5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_15dp"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/farmertobusiness"
+                    android:textSize="13sp"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_addbusiness"
+                android:layout_below="@+id/rl_f2b"
+                android:layout_marginHorizontal="@dimen/dimen_10dp"
+                android:layout_marginVertical="@dimen/dimen_5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_5dp"
+                android:background="@color/colorBackgroundGrey"
+                >
+
+                <TextView
+                    android:id="@+id/tv_content1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bringing Farm Closer to the Market"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:gravity="left"
+                    />
+                <TextView
+                    android:id="@+id/tv_content2"
+                    android:layout_below="@+id/tv_content1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B2B Agri Commodity Marketplace to facilitate direct transaction between farm produce sellers and businesses."
+                    android:textSize="12sp"
+                    android:layout_centerHorizontal="true"
+                    android:textAlignment="center"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:textColor="@color/colorBlack"
+                    />
+                <Button
+                    android:id="@+id/btn_addbusiness"
+                    android:layout_width="120dp"
+                    android:layout_height="@dimen/dimen_30dp"
+                    android:text="Add Business"
+                    android:background="@drawable/btn_bg"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:textColor="@color/colorYellow"
+                    android:textSize="12sp"
+                    android:layout_centerHorizontal="true"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:layout_below="@+id/tv_content2"/>
+
+                <ImageView
+                    android:id="@+id/iv_promo"
+                    style="@style/txt_style_heading3d"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_toRightOf="@+id/tv_content2"
+                    android:src="@drawable/video_player2"
+                    android:visibility="gone"
+                    android:scaleType="fitCenter"
+                    />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_manualrecyclerview"
+                android:layout_below="@+id/rl_businesscycle"
+                android:layout_marginHorizontal="@dimen/dimen_10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@color/colorWhite"
+                android:visibility="gone"
+                >
+
+                <ImageView
+                    android:layout_width="350dp"
+                    android:layout_height="55dp"
+                    android:layout_marginHorizontal="@dimen/dimen_15dp"
+                    android:layout_marginVertical="@dimen/dimen_5dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/substain_21"
+                    />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_businesscycle"
+                android:layout_below="@+id/rl_membershipAds"
+                android:layout_marginHorizontal="@dimen/dimen_10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@color/colorWhite"
+
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginHorizontal="@dimen/dimen_15dp"
+                    android:layout_marginVertical="@dimen/dimen_5dp"
+                    android:scaleType="fitXY"
+                    android:visibility="gone"
+                    android:src="@drawable/bizcycle" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_membershipAds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/customCarouselView"
+                android:layout_marginHorizontal="@dimen/dimen_10dp"
+                android:background="@color/colorPrimaryDark"
+                android:padding="@dimen/dimen_5dp">
+
+                <TextView
+                    android:id="@+id/tv_adstitle"
+                    style="@style/txt_style_heading5l"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="5dp"
+                    android:text="ADVIRA Elite Green"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/tv_adsname"
+                    style="@style/txt_style_heading6l"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_adstitle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="5dp"
+                    android:text="To get more benefits Join Membership"
+                    android:textColor="@color/colorYellow"
+                    android:textStyle="italic"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tv_buyplan"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="@dimen/dimen_5dp"
+                    android:background="@drawable/border_grey_color_transparent"
+                    android:backgroundTint="@color/colorYellow"
+                    android:gravity="center"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="@dimen/dimen_5dp"
+                    android:text="Join Now"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_cheese"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/colorYellow"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_manualrecyclerviewb2b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_addbusiness"
+                android:layout_marginHorizontal="@dimen/dimen_10dp"
+                android:layout_marginVertical="@dimen/dimen_5dp"
+                android:background="@color/colorWhite">
+
+                <TextView
+                    android:id="@+id/tv_contentb2b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_5dp"
+                    android:gravity="left"
+                    android:text="B2B Marketplace Features​"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="350dp"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/tv_contentb2b"
+                    android:layout_marginStart="@dimen/dimen_20dp"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:layout_marginEnd="@dimen/dimen_20dp"
+                    android:layout_marginBottom="@dimen/dimen_20dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/b2b_marletplace" />
+
+
+            </RelativeLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_below="@+id/rl_manualrecyclerviewb2b"
+                tools:ignore="MissingConstraints">
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:orientation="horizontal"
+                    android:rowCount="4"
+                    tools:layout_editor_absoluteX="56dp"
+                    tools:layout_editor_absoluteY="0dp">
+                    <!--add  several shimmer placeholder layout -->
+                    <include layout="@layout/shimmer_placeholder_layout" />
+                    <include layout="@layout/shimmer_placeholder_layout"/>
+                    <include layout="@layout/shimmer_placeholder_layout"/>
+                    <include layout="@layout/shimmer_placeholder_layout"/>
+
+                </GridLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/rl_manualrecyclerviewb2b"
+                android:scrollbars="vertical" />
+
+            <RelativeLayout
+                android:id="@+id/rl_largeb2b"
+                android:layout_below="@+id/recyclerView"
+                android:layout_marginHorizontal="@dimen/dimen_10dp"
+                android:layout_marginVertical="@dimen/dimen_5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:id="@+id/tv_largeb2b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Join World’s Largest B2B Marketplace​"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:gravity="left"/>
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_below="@+id/tv_largeb2b"
+                    android:layout_marginHorizontal="@dimen/dimen_10dp"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/largestb2b_marketplace_4x" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_getstarted"
+                android:layout_below="@+id/rl_largeb2b"
+                android:layout_marginHorizontal="@dimen/dimen_10dp"
+                android:layout_marginVertical="@dimen/dimen_5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_10dp"
+                android:background="@color/colorBackgroundGrey"
+                >
+
+                <TextView
+                    android:id="@+id/tv_content3"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Get Started"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:gravity="left"
+                    />
+                <TextView
+                    android:id="@+id/tv_content4"
+                    android:layout_below="@+id/tv_content3"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Post bid offer as a buyer for the agricultural commodity as per specification and get it delivered to your doorstep."
+                    android:textSize="11sp"
+                    android:justificationMode="inter_word"
+                    android:layout_marginTop="@dimen/dimen_15dp"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="left"
+                    />
+                <Button
+                    android:id="@+id/btn_register"
+                    android:layout_width="110dp"
+                    android:layout_height="@dimen/dimen_25dp"
+                    android:text="Register"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/btn_bg"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:textColor="@color/colorYellow"
+                    android:textSize="12sp"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:textAllCaps="false"
+                    android:layout_below="@+id/iv_getstarted"/>
+
+                <ImageView
+                    android:id="@+id/iv_getstarted"
+                    android:layout_width="120dp"
+                    android:layout_height="90dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_toRightOf="@+id/tv_content4"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/farmar_b2b_4x" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_faqs"
+                android:layout_below="@+id/rl_getstarted"
+                android:layout_marginHorizontal="@dimen/dimen_10dp"
+                android:layout_marginVertical="@dimen/dimen_5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_10dp"
+                >
+
+                <Button
+                    android:id="@+id/btn_faqs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="FAQs"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/btn_bg"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:textColor="@color/colorYellow"
+                    android:textSize="14sp"
+                    android:layout_marginHorizontal="@dimen/dimen_25dp"
+                    android:layout_marginVertical="@dimen/dimen_20dp"
+                    android:textAllCaps="false"
+                    android:gravity="center"
+                    />
+
+                <Button
+                    android:id="@+id/btn_contactus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Us"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/btn_bg"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:textColor="@color/colorYellow"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:layout_below="@+id/btn_faqs"
+                    android:layout_marginHorizontal="@dimen/dimen_25dp"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:textAllCaps="false"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_stayhome"
+                android:layout_below="@+id/rl_faqs"
+                android:layout_marginHorizontal="@dimen/dimen_10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:visibility="gone"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/stayhome_4x"
+                    android:visibility="gone"
+                    />
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

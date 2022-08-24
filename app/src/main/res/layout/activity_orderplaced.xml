@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".order.OrderPlacedActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_myacc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="@drawable/ripple_effect"
+            android:paddingLeft="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/iv_pd_header"
+                style="@style/txt_style_heading1l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_15dp"
+android:layout_marginVertical="16dp"
+android:src="@drawable/ic_arrow_back_24dp" />
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_headerlogo"
+            style="@style/txt_style_heading1l"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_toRightOf="@id/rl_back"
+            android:layout_marginLeft="10dp"
+            android:layout_marginVertical="15dp"
+            android:src="@drawable/splash_logo"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/tv_pd_header2"
+            style="@style/txt_style_heading4d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/dimen_2dp"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:layout_toRightOf="@id/iv_headerlogo"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="Confirm Order" />
+
+        <RelativeLayout
+            android:id="@+id/rl_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_effect"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginVertical="15dp">
+            <ImageView
+                android:id="@+id/iv_search"
+                style="@style/txt_style_heading1l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@color/colorPrimaryDark"
+                android:src="@drawable/ic_search_button_select" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_effect"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginVertical="15dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_shopping_cart_24dp"
+                android:tint="@color/colorPrimaryDark" />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_cartcount"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="-25dp"
+            android:layout_toStartOf="@+id/rl_cart"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center"
+            android:textColor="@color/colorRed"
+            android:textSize="10dp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_loginmain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_myacc"
+        android:layout_marginHorizontal="15dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layout_marginBottom="@dimen/dp_56">
+
+            <RelativeLayout
+                android:id="@+id/rl_login2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/tv_circle"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/splash_circleborder" />
+
+
+                <ImageView
+                    android:id="@+id/chk"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:contentDescription="@null"
+                    android:padding="8dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/animated_vector_check" />
+
+
+                <TextView
+                    android:id="@+id/tv_msg"
+                    style="@style/txt_style_heading3d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_circle"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_horizontal"
+                    android:text="Your Order # has been placed successfully"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+
+                <TextView
+                    android:id="@+id/tv_msg2"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_msg"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="Your Order has been Confirmed. Your can track the order status in 'My Orders' section" />
+
+                <Button
+                    android:id="@+id/btn_continueshopping"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_msg2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginVertical="20dp"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/button_selector"
+                    android:text="CONTINUE SHOPPING"
+                    android:textColor="@color/colorYellow"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_goto"
+                    style="@style/txt_style_heading5d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btn_continueshopping"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_horizontal"
+                    android:text="Go to Orders"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56"
+            android:layout_alignParentBottom="true"
+            >
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigatin_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:background="@drawable/drop_shadow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:itemIconSize="22dp"
+                app:elevation="8dp"
+                app:labelVisibilityMode="labeled"
+                app:itemTextColor="@color/colorPrimaryDark"
+                app:menu="@menu/bottom_navigation_menu"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</RelativeLayout>

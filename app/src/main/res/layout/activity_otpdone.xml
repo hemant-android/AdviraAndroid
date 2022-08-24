@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.guest.RFQDoneActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_loginmain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="20dp">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_login2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/tv_circle"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/splash_circleborder"/>
+
+
+            <ImageView
+                android:id="@+id/chk"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerInParent="true"
+                android:contentDescription="@null"
+                android:padding="8dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/animated_vector_check"/>
+
+
+
+            <TextView
+                android:id="@+id/tv_msg"
+                style="@style/txt_style_heading4l"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/tv_circle"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/otp_verified" />
+
+
+            <Button
+                android:id="@+id/btn_continueshopping"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_msg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="@string/fp_donemsgbtn"
+                android:background="@drawable/button_selector"
+                style="@style/txt_style_heading2d"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"/>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

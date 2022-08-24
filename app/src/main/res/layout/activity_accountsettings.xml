@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <RelativeLayout
+        android:id="@+id/rl_myacc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_effect"
+            android:paddingLeft="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/iv_signup_header"
+                style="@style/txt_style_heading1l"
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:layout_marginHorizontal="@dimen/dimen_15dp"
+android:layout_marginVertical="16dp"
+android:src="@drawable/ic_arrow_back_24dp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:id="@+id/rl_signup2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_myacc">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_aboutus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_grey_color_transparent"
+                    android:padding="@dimen/dimen_5dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="@dimen/dimen_10dp"
+                        android:src="@drawable/aboutus"
+                        android:tint="@color/colorPrimaryDark"/>
+
+                    <TextView
+                        android:id="@+id/tv_aboutus"
+                        style="@style/txt_style_heading4d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="10dp"
+                        android:text="About Us" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_aboutus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_arrow_right_blue_24dp"
+                        android:tint="@color/colorPrimaryDark" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_faq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cv_aboutus"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_grey_color_transparent"
+                    android:padding="@dimen/dimen_5dp">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/faq"
+                        android:tint="@color/colorPrimaryDark"
+                        android:layout_marginBottom="@dimen/dimen_10dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_faq"
+                        style="@style/txt_style_heading4d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="10dp"
+                        android:text="FAQ" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_faq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_arrow_right_blue_24dp"
+                        android:tint="@color/colorPrimaryDark" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_tnc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cv_faq"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_grey_color_transparent"
+                    android:padding="@dimen/dimen_5dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_tnc_24dp"
+                        android:tint="@color/colorPrimaryDark"
+                        android:layout_marginBottom="@dimen/dimen_10dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_tnc"
+                        style="@style/txt_style_heading4d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Terms &amp; Conditions" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_tnc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_arrow_right_blue_24dp"
+                        android:tint="@color/colorPrimaryDark" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_privacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cv_tnc"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_grey_color_transparent"
+                    android:padding="@dimen/dimen_5dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_policy_24dp"
+                        android:tint="@color/colorPrimaryDark"
+                        android:layout_marginBottom="@dimen/dimen_10dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_privacy"
+                        style="@style/txt_style_heading4d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Privacy Policy" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_privacy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_arrow_right_blue_24dp"
+                        android:tint="@color/colorPrimaryDark" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_return"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cv_privacy"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_grey_color_transparent"
+                    android:padding="@dimen/dimen_5dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/return_policy"
+                        android:tint="@color/colorPrimaryDark"
+                        android:layout_marginBottom="@dimen/dimen_10dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_return"
+                        style="@style/txt_style_heading4d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="@dimen/dp_16"
+                        android:text="Return and Cancellation Policy" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_return"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_arrow_right_blue_24dp"
+                        android:tint="@color/colorPrimaryDark" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/rl_changepass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cv_return"
+                android:layout_marginVertical="10dp"
+                android:visibility="gone"
+                android:layout_marginHorizontal="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_grey_color_transparent"
+                    android:padding="@dimen/dimen_5dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/ic_changepassword_24dp"
+                        android:tint="@color/colorPrimaryDark"
+                        android:layout_marginBottom="@dimen/dimen_10dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_custservice"
+                        style="@style/txt_style_heading4d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Change Password" />
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_arrow_right_blue_24dp"
+                        android:tint="@color/colorPrimaryDark" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_appversion"
+        style="@style/txt_style_heading6d"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_above="@id/tv_copyright"
+        android:textAlignment="center"
+        android:text="@string/version" />
+    <TextView
+        android:id="@+id/tv_copyright"
+        style="@style/txt_style_heading6d"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:textAlignment="center"
+        android:text="© 2020, Advira Technomanagement (P) Ltd., or its affiliates" />
+
+</RelativeLayout>

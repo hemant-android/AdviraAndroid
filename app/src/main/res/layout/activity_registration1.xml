@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.registration.mobileotp.RegistrationActivity1">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_effect"
+            android:paddingLeft="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/iv_signup_header"
+                style="@style/txt_style_heading1l"
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:layout_marginHorizontal="@dimen/dimen_15dp"
+                android:layout_marginVertical="16dp"
+                android:src="@drawable/ic_arrow_back_24dp" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_signup_header2"
+            style="@style/txt_style_heading4d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/dimen_2dp"
+            android:layout_toRightOf="@id/rl_back"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:text="@string/su_header" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/rl_signup2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_signup"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="70dp">
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_signupmain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_signup"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginVertical="@dimen/dimen_10dp">
+        <TextView
+            android:id="@+id/tv_version"
+            style="@style/txt_style_heading6l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/version"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="265dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/tv_version"
+            android:src="@drawable/advirahealnew"/>
+
+
+        <TextView
+            android:id="@+id/tv_welcome"
+            style="@style/txt_style_heading2l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_logo"
+            android:layout_marginTop="20dp"
+            android:text="Welcome,"
+            android:textSize="28sp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_signin"
+            style="@style/txt_style_heading4l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_welcome"
+            android:layout_marginTop="5dp"
+            android:text="Sign up"
+            android:textColor="@color/colorBlack" />
+
+
+        <TextView
+            android:id="@+id/tv_guestmessage"
+            style="@style/txt_style_heading3d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_signin"
+            android:layout_marginTop="20dp"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/tv_signup_header3"
+            style="@style/txt_style_heading3d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_guestmessage"
+            android:layout_marginTop="25dp"
+            android:text="@string/su_entermobileno"
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/et_mobileno"
+            style="@style/txt_style_heading3l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_signup_header3"
+            android:layout_marginTop="20dp"
+            android:padding="@dimen/dimen_15dp"
+            android:background="@drawable/editbox_selector"
+            android:autofillHints="@string/prompt_email"
+            android:hint="@string/su_mobile"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="10" />
+
+        <CheckBox
+            android:id="@+id/chk_terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_mobileno"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="12dp"
+            android:checked="true" />
+
+        <TextView
+            android:id="@+id/tv_terms"
+            style="@style/txt_style_heading6d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_mobileno"
+            android:layout_marginVertical="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/chk_terms"
+            android:text="tv_terms"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorGrey" />
+
+    </RelativeLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:id="@+id/rl_footer"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/dimen_25dp"
+        >
+
+        <Button
+            android:id="@+id/btn_continue"
+            style="@style/txt_style_heading2l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_selector"
+            android:gravity="center"
+            android:text="@string/su_continue"
+            android:textSize="14sp"
+            android:textColor="@color/colorYellow"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

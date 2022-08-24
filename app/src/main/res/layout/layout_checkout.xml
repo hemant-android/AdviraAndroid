@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_pro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/img_product"
+                    android:layout_width="120dp"
+                    android:layout_height="100dp"
+                    android:padding="4dp"
+                    android:src="@drawable/advirahealnew" />
+
+                <TextView
+                    android:id="@+id/tv_prodname"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/img_product"
+                    android:text="ADVIKOFF-LS" />
+
+                <TextView
+                    android:id="@+id/tv_order"
+                    style="@style/txt_style_heading6d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_prodname"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/img_product"
+                    android:text="MOQ:10pcs" />
+
+                <TextView
+                    android:id="@+id/tv_mrp"
+                    style="@style/txt_style_heading6m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_order"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/img_product"
+                    android:text="MRP : " />
+
+                <TextView
+                    android:id="@+id/tv_mrpval"
+                    style="@style/txt_style_heading6d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_order"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/tv_mrp"
+                    android:foreground="@drawable/strike_through"
+                    android:text="₹ 80.00" />
+
+                <TextView
+                    android:id="@+id/tv_inr"
+                    style="@style/txt_style_heading5d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_mrpval"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/tv_order"
+                    android:layout_marginLeft="10dp"
+                    android:text="₹"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    style="@style/txt_style_heading5d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/tv_order"
+                    android:layout_toRightOf="@id/tv_inr"
+                    android:text="120"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_deliv"
+                    style="@style/txt_style_heading6d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/img_product"
+                    android:text="Delivery by, Sun 24 Dec 2020"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@id/tv_inr" />
+
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

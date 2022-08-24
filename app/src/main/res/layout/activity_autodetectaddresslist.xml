@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.address.AutoDetectAddressList">
+
+    <RelativeLayout
+        android:id="@+id/rl_deliverylocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_effect"
+            android:paddingLeft="5dp">
+
+            <ImageView
+                android:id="@+id/iv_pd_header"
+                style="@style/txt_style_heading1l"
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:layout_marginHorizontal="@dimen/dimen_15dp"
+                android:layout_marginVertical="16dp"
+                android:src="@drawable/ic_arrow_back_24dp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_headerlogo"
+            style="@style/txt_style_heading1l"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginVertical="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/rl_back"
+            android:src="@drawable/splash_logo"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/tv_pd_header2"
+            style="@style/txt_style_heading4d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_headerlogo"
+            android:paddingBottom="@dimen/dimen_2dp"
+            android:text="Choose Location"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/rl_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ripple_effect">
+
+            <ImageView
+                android:id="@+id/iv_search"
+                style="@style/txt_style_heading1l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_15dp"
+                android:layout_marginVertical="16dp"
+                android:src="@drawable/ic_search_button_select"
+                android:tint="@color/colorPrimaryDark" />
+        </RelativeLayout>
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/rl_searchadd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:layout_below="@+id/rl_deliverylocation"
+        android:layout_margin="5dp">
+
+        <EditText
+            android:id="@+id/et_searchadd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_background"
+            android:drawableLeft="@drawable/ic_my_location_24dp"
+            android:drawablePadding="@dimen/dimen_10dp"
+            android:drawableTint="@color/colorPrimaryDark"
+            android:gravity="center_vertical"
+            android:hint="Search Location"
+            android:padding="@dimen/dimen_10dp" />
+        
+    </RelativeLayout>
+
+    <fragment
+        android:id="@+id/google_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_searchadd" />
+
+    <RelativeLayout
+        android:id="@+id/rl_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/azure"
+        android:visibility="gone"
+        android:layout_above="@+id/rl_currentlocation">
+
+        <TextView
+            android:id="@+id/tv_service"
+            style="@style/txt_style_heading5l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_10dp"
+            android:text="Sorry ,this location is not serviceable!"
+            android:textColor="@color/colorRed" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_currentlocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btm_nav"
+        android:background="@color/white"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/iv_deliv"
+            style="@style/txt_style_heading1l"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:padding="@dimen/dimen_2dp"
+            android:src="@drawable/place_24px" />
+
+        <TextView
+            android:id="@+id/tv_local"
+            style="@style/txt_style_heading3l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="3dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginRight="@dimen/dimen_35dp"
+            android:layout_toRightOf="@+id/iv_deliv"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:padding="@dimen/dimen_2dp"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark" />
+
+        <EditText
+            android:id="@+id/et_localedit"
+            style="@style/txt_style_heading3l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="3dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginRight="@dimen/dimen_35dp"
+            android:layout_toRightOf="@+id/iv_deliv"
+            android:gravity="left"
+            android:maxLines="2"
+            android:padding="3dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_edit"
+            style="@style/txt_style_heading1l"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:padding="@dimen/dimen_2dp"
+            android:src="@drawable/ic_edit_black_icon_profile"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_city"
+            style="@style/txt_style_heading5l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_local"
+            android:layout_marginVertical="@dimen/dimen_2dp"
+            android:layout_marginStart="5dp"
+            android:layout_toRightOf="@+id/iv_deliv"
+            android:padding="@dimen/dimen_2dp"
+            android:text="Kanpur"
+            android:textColor="@color/colorPrimaryDark"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_getadd"
+            style="@style/txt_style_heading4l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_local"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="@dimen/dimen_5dp"
+            android:background="@drawable/button_selector"
+            android:gravity="center"
+            android:padding="@dimen/dimen_5dp"
+            android:text="Confirm Location and proceed"
+            android:textColor="@color/colorYellow"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btm_nav"
+        >
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigatin_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:background="@drawable/drop_shadow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:itemIconSize="22dp"
+            app:itemIconTint="@color/colorGreymidlight"
+            app:elevation="8dp"
+            app:labelVisibilityMode="labeled"
+            app:itemTextColor="@color/colorPrimaryDark"
+            app:menu="@menu/bottom_navigation_menu"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

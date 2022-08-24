@@ -1,0 +1,615 @@
+package com.advira.advirafarm.buyer.ui.payment.paylaterpayment;
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.webkit.WebView;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.FrameLayout;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
+
+import com.advira.advirafarm.buyer.R;
+import com.advira.advirafarm.buyer.order.OrderPlacedActivity;
+import com.advira.advirafarm.buyer.retrofurlconnection.RetrofitUrlConnection;
+import com.advira.advirafarm.buyer.ui.navigation.MainActivityNav;
+import com.advira.advirafarm.buyer.ui.payment.api.PGPaymentRequest;
+import com.advira.advirafarm.buyer.ui.payment.api.PGPaymentResponse;
+import com.advira.advirafarm.buyer.ui.payment.paymentfailed.OrderPaymentFailedActivity;
+import com.advira.advirafarm.buyer.ui.payment.razorpay.RazorPayNoCostEMIList;
+import com.advira.advirafarm.buyer.ui.product.ProductDetailsActivity;
+import com.advira.advirafarm.buyer.ui.product.ProductDetailsActivityB2B;
+import com.advira.advirafarm.buyer.utility.SharedPrefUtil;
+import com.advira.advirafarm.buyer.utility.Singleton;
+import com.advira.advirafarm.buyer.utility.Utilities;
+import com.google.gson.Gson;
+import com.razorpay.PaymentData;
+import com.razorpay.PaymentResultWithDataListener;
+import com.razorpay.Razorpay;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Map;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+import static com.advira.advirafarm.buyer.constants.IConsts.SHARED_PREF_CARTCOUNT;
+import static com.advira.advirafarm.buyer.constants.IConsts.SHARED_PREF_CARTCOUNTB2B;
+import static com.advira.advirafarm.buyer.constants.IConsts.SHARED_PREF_CARTCOUNTB2C;
+import static com.advira.advirafarm.buyer.constants.IConsts.SHARED_PREF_PaymentCheck;
+import static com.advira.advirafarm.buyer.constants.IConsts.SHARED_PREF_TOKEN;
+
+public class PayLaterRazorPayNoCostEMIBank extends Activity implements PaymentResultWithDataListener {
+
+    private static final String TAG = PayLaterRazorPayNoCostEMIBank.class.getSimpleName();
+    String name = "";
+    String cardNumber = "";
+    String cvv = "";
+    String month = "";
+    String year = "";
+    String paymentcode = "";
+    String order_id = "";
+    String receipt = "";
+    String customerName = "";
+    String customerPhone = "";
+    String customerEmail = "";
+    String grandtotal = "";
+    String adviragrandtotal = "";
+    String adviraorderid = "";
+    String adviraorderno = "";
+    String paymentref = "";
+
+
+
+    String ordertype = "";
+    String totalamount = "";
+    String totaltax = "";
+    String totaldiscount = "";
+    String addressid = "";
+    String discount_coupon_name = "";
+    String discount_type = "";
+    String discount_amount = "";
+    String discount_details = "";
+    String discountid = "";
+
+
+    ArrayList<String> banksCodesList = new ArrayList<>();
+    AlertDialog.Builder builder;
+    private Razorpay razorpay;
+    private WebView webview;
+    private JSONObject payload;
+    private Context mContext;
+    private RelativeLayout rl_back;
+    private FrameLayout frameLayout;
+    private ListView listView;
+    private ArrayList<String> banksList = new ArrayList<>();
+    private ArrayAdapter banksListAdapter;
+
+
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_razorpay_payment);
+        WebView.setWebContentsDebuggingEnabled(false);
+
+        mContext = PayLaterRazorPayNoCostEMIBank.this;
+        try {
+
+            Bundle extras = getIntent().getExtras();
+
+            if (extras != null) {
+                name = extras.getString("name");
+                cardNumber = extras.getString("cardno");
+                cvv = extras.getString("cvv");
+                month = extras.getString("month");
+                year = extras.getString("year");
+                paymentcode = extras.getString("paymentcode");
+                order_id = extras.getString("order_id");
+                receipt = extras.getString("receipt");
+                customerName = extras.getString("customerName");
+                customerEmail = extras.getString("customerEmail");
+                customerPhone = extras.getString("customerPhone");
+                grandtotal = extras.getString("grandtotal");
+                adviraorderid = extras.getString("adviraorderid");
+                adviraorderno = extras.getString("adviraorderno");
+                adviragrandtotal = extras.getString("adviragrandtotal");
+
+
+                ordertype = extras.getString("ordertype");
+                totalamount = extras.getString("totalamount");
+                totaltax = extras.getString("totaltax");
+                totaldiscount = extras.getString("totaldiscount");
+                addressid = extras.getString("addressid");
+                discount_coupon_name = extras.getString("discount_coupon_name");
+                discount_type = extras.getString("discount_type");
+                discount_amount = extras.getString("discount_amount");
+                discount_details = extras.getString("discount_details");
+                discountid = extras.getString("discountid");
+
+
+
+
+
+            }
+        } catch (Exception ex) {
+
+        }
+
+
+        frameLayout = (FrameLayout) findViewById(R.id.frame);
+        webview = findViewById(R.id.payment_webview);
+
+        /*LayoutInflater.from(RazorPayPayment.this).inflate(R.layout.fragment_method_netbanking_wallet_list,
+                frameLayout, true);*/
+        banksListAdapter = new ArrayAdapter<String>(this, R.layout.text_view_list_banks_wallet, banksList);
+
+
+        initRazorpay();
+        createWebView();
+
+        if (paymentcode.contains("emi")) {
+            frameLayout.setVisibility(View.VISIBLE);
+
+            paymentcode=paymentcode.replace("emi","");
+           // SubmitEMIDetails();
+
+        }
+
+
+        rl_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                builder = new AlertDialog.Builder(mContext);
+                builder.setTitle("Go Back !! ");
+
+                //Setting message manually and performing action on button click
+                builder.setMessage("Going back will abort the payment process. Are you sure ?")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+
+                                SharedPrefUtil.setPaymentCheck(mContext, SHARED_PREF_PaymentCheck, "retain");
+                                PayLaterRazorPayNoCostEMIBank.this.finish();
+
+                            }
+                        })
+                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+
+                                dialog.cancel();
+
+                            }
+                        });
+                //Creating dialog box
+                AlertDialog alert = builder.create();
+                //Setting the title manually
+                alert.show();
+
+                alert.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(mContext.getResources().getColor(R.color.colorThemeDark));
+                alert.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(mContext.getResources().getColor(R.color.colorThemeDark));
+
+
+            }
+        });
+
+
+    }
+
+    private void initRazorpay() {
+        razorpay = new Razorpay(this);
+
+
+        rl_back = findViewById(R.id.rl_back);
+
+
+        razorpay.getPaymentMethods(new Razorpay.PaymentMethodsCallback() {
+            @Override
+            public void onPaymentMethodsReceived(String result) {
+
+                /**
+                 * This returns JSON data
+                 * The structure of this data can be seen at the following link:
+                 * https://api.razorpay.com/v1/methods?key_id=rzp_test_1DP5mmOlF5G5ag
+                 *
+                 */
+                //Log.d("Result", "" + result);
+                inflateLists(result);
+            }
+
+            @Override
+            public void onError(String error) {
+                Log.d("Get Payment error", error);
+            }
+        });
+
+
+    }
+
+    private void inflateLists(String result) {
+        try {
+            JSONObject paymentMethods = new JSONObject(result);
+            JSONObject banksListJSON = paymentMethods.getJSONObject("netbanking");
+
+            Iterator<String> itr1 = banksListJSON.keys();
+            while (itr1.hasNext()) {
+                String key = itr1.next();
+
+                String jhj = banksListJSON.getString(key);
+                String jhjj = key;
+
+                String jhjsj = key;
+
+                try {
+                    if(key.equalsIgnoreCase("KKBK")
+                            ||key.equalsIgnoreCase("UTIB")
+                            ||key.equalsIgnoreCase("INDB")
+                            ||key.equalsIgnoreCase("RATN")
+                            ||key.equalsIgnoreCase("HDFC")
+                            ||key.equalsIgnoreCase("SCBL")
+                            ||key.equalsIgnoreCase("BARB")
+                            ||key.equalsIgnoreCase("ICIC")
+                            ||key.equalsIgnoreCase("YESB")
+                            ||key.equalsIgnoreCase("CITI")
+                            ||key.equalsIgnoreCase("AMEX")
+                    ) {
+                        banksCodesList.add(key);
+                        banksList.add(banksListJSON.getString(key));
+                    }
+                } catch (JSONException e) {
+                    //Log.d("Reading Banks List", "" + e.getMessage());
+                }
+            }
+
+
+            if (banksListAdapter != null) {
+                banksListAdapter.notifyDataSetChanged();
+            }
+            netbankinglist();
+
+        } catch (Exception e) {
+            Log.e("Parsing Result", "" + e.getMessage());
+        }
+    }
+
+
+    private void netbankinglist() {
+        LayoutInflater.from(PayLaterRazorPayNoCostEMIBank.this).inflate(R.layout.fragment_method_netbanking_wallet_list, frameLayout, true);
+        listView = findViewById(R.id.method_available_options_list);
+        listView.setAdapter(banksListAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+               // submitNetbankingDetails(banksCodesList.get(position));
+                SubmitEMIDetails(banksCodesList.get(position));
+
+            }
+        });
+    }
+
+    public void submitNetbankingDetails(String bankName) {
+
+        try {
+            payload = new JSONObject("{currency: 'INR'}");
+            payload.put("amount", grandtotal);
+            payload.put("contact", customerPhone);
+            payload.put("email", customerEmail);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+        try {
+            payload.put("method", "netbanking");
+            payload.put("bank", bankName);
+            payload.put("order_id", order_id);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+
+    }
+
+
+    private void createWebView() {
+        /**
+         * You need to pass the webview to Razorpay
+         */
+        razorpay.setWebView(webview);
+
+        /**
+         * Override the RazorpayWebViewClient for your custom hooks
+         */
+
+    }
+
+
+    private void SubmitEMIDetails(String bankcode) {
+
+
+        year = year.substring(2, 4);
+
+
+        try {
+            payload = new JSONObject("{currency: 'INR'}");
+            payload.put("amount", grandtotal);
+            payload.put("contact", customerPhone);
+            payload.put("email", customerEmail);
+            payload.put("order_id", order_id);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        try {
+            payload.put("method", "emi");
+            payload.put("emi_duration", paymentcode);
+            payload.put("card[name]", name);
+            payload.put("card[number]", cardNumber);
+            payload.put("card[expiry_month]", month);
+            payload.put("card[expiry_year]", year);
+            payload.put("card[cvv]", cvv);
+
+
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+
+        Intent mainIntent = new Intent(mContext, RazorPayNoCostEMIList.class);
+        mainIntent.putExtra("grandtotal", grandtotal);
+        mainIntent.putExtra("customerPhone", customerPhone);
+        mainIntent.putExtra("customerEmail", customerEmail);
+        mainIntent.putExtra("order_id", order_id);
+        mainIntent.putExtra("bankcode", bankcode);
+        mainIntent.putExtra("paymentcode", paymentcode);
+        mainIntent.putExtra("adviraorderid", adviraorderid);
+        mainIntent.putExtra("adviraorderno", adviraorderno);
+        mainIntent.putExtra("grandtotal",grandtotal);
+        mainIntent.putExtra("adviragrandtotal",adviragrandtotal);
+
+        mainIntent.putExtra("ordertype", ordertype);
+        mainIntent.putExtra("totalamount", totalamount);
+        mainIntent.putExtra("totaltax", totaltax);
+        mainIntent.putExtra("totaldiscount", totaldiscount);
+        mainIntent.putExtra("addressid", addressid);
+        mainIntent.putExtra("grandtotal", grandtotal);
+        mainIntent.putExtra("discount_coupon_name", discount_coupon_name);
+        mainIntent.putExtra("discount_type", discount_type);
+        mainIntent.putExtra("discount_amount", discount_amount);
+        mainIntent.putExtra("discount_details", discount_details);
+        mainIntent.putExtra("discountid", discountid);
+
+        PayLaterRazorPayNoCostEMIBank.this.startActivity(mainIntent);
+
+
+    }
+
+
+
+
+
+    private void sendRequest() {
+        razorpay.validateFields(payload, new Razorpay.ValidationListener() {
+            @Override
+            public void onValidationSuccess() {
+                try {
+                    webview.setVisibility(View.VISIBLE);
+                    razorpay.submit(payload, PayLaterRazorPayNoCostEMIBank.this);
+                } catch (Exception e) {
+                    Log.e("com.example", "Exception: ", e);
+                }
+            }
+
+            @Override
+            public void onValidationError(Map<String, String> error) {
+                Log.d("com.example", "Validation failed: " + error.get("field") + " " + error.get("description"));
+                Toast.makeText(PayLaterRazorPayNoCostEMIBank.this, "Validation: " + error.get("field") + " " + error.get("description"), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        razorpay.onBackPressed();
+        super.onBackPressed();
+        webview.setVisibility(View.GONE);
+    }
+
+    /* callback for permission requested from android */
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        if (razorpay != null) {
+            razorpay.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+    }
+
+    @Override
+    public void onPaymentSuccess(String razorpayPaymentId, PaymentData paymentData) {
+
+
+        //Prints all extras. Replace with app logic.
+        if (paymentData != null) {
+
+
+            try {
+                Gson gson = new Gson();
+                String jsondata = gson.toJson(paymentData.getData()).toString();
+                Log.d(TAG, "API Response razorpay: " + jsondata);
+                paymentref = jsondata;
+            } catch (Exception ex) {
+
+            }
+        }
+
+
+        webview.setVisibility(View.GONE);
+        //singleton.getInstance().showShortToast(PayLaterRazorPayNoCostEMIBank.this, "Payment Successful");
+        //Toast.makeText(RazorPayPayment.this, "Payment Successful ", Toast.LENGTH_SHORT).show();
+        PaymentDetails("SUCCESS", "");
+
+        // finish();
+    }
+
+    @Override
+    public void onPaymentError(int errorCode, String errorDescription, PaymentData paymentData) {
+
+        if (paymentData != null) {
+            Gson gson = new Gson();
+            String jsondata = gson.toJson(paymentData).toString();
+            Log.d(TAG, "API Response razorpay: " + jsondata);
+            paymentref = errorDescription;
+        }
+
+        webview.setVisibility(View.GONE);
+        //Toast.makeText(RazorPayPayment.this, "Error " + Integer.toString(errorCode) + ": " + errorDescription, Toast.LENGTH_SHORT).show();
+        //Log.d("com.example", "onError: " + Integer.toString(errorCode) + ": " + errorDescription);
+        //Toast.makeText(RazorPayPayment.this, "Payment Failed", Toast.LENGTH_SHORT).show();
+
+
+        String errormessage = "";
+
+        try {
+
+            JSONObject obj = new JSONObject(errorDescription);
+            JSONObject obj1 = new JSONObject(obj.getString("error"));
+            errormessage = obj1.getString("description");
+            Log.d("description ", errormessage);
+
+            //Singleton.getInstance().showShortToast(mContext, errormessage+"---9");
+
+
+        } catch (Throwable tx) {
+
+
+        }
+
+
+        if (errormessage.contains("number is invalid")) {
+
+            SharedPrefUtil.setPaymentCheck(mContext, SHARED_PREF_PaymentCheck, "retain");
+            PayLaterRazorPayNoCostEMIBank.this.finish();
+            //Singleton.getInstance().showErrorLongToast(mContext, errormessage+"--10");
+
+        } else {
+            PaymentDetails("FAILED", errormessage);
+        }
+
+
+    }
+
+
+    private void PaymentDetails(String paystatus, String errormessage) {
+
+
+        Utilities.showLoading(mContext);
+        String token = SharedPrefUtil.getUniversalSharedPrefToken(mContext, SHARED_PREF_TOKEN, "");
+        String paytype = "";
+        String paymode = "";
+
+
+        if (paymentcode.equalsIgnoreCase("card")) {
+            paytype = "RazorPay";
+            paymode = "Debit-Card";
+        } else if (paymentcode.equalsIgnoreCase("netbanking")) {
+            paytype = "RazorPay";
+            paymode = "Net-Banking";
+        } else if (paymentcode.equalsIgnoreCase("upi")) {
+            paytype = "RazorPay";
+            paymode = "UPI";
+        }
+
+
+        String paidamount = grandtotal.substring(0, grandtotal.length() - 2);
+
+        PGPaymentRequest pgPaymentRequest = new PGPaymentRequest();
+        pgPaymentRequest.setOrderId(adviraorderid);
+        pgPaymentRequest.setPaymentType(paytype);
+        pgPaymentRequest.setPaymentMode(paymode);
+        pgPaymentRequest.setPaymentAmount(paidamount);
+        pgPaymentRequest.setPaymentDueAmount("0");
+        pgPaymentRequest.setPaymentRef(paymentref);
+        pgPaymentRequest.setPaymentStatus(paystatus);
+
+        Gson gson = new Gson();
+        String jsondata = gson.toJson(pgPaymentRequest).toString();
+
+        try {
+
+            Call<PGPaymentResponse> call = RetrofitUrlConnection.loadJSON(token).addpgpaymentdetails(pgPaymentRequest);
+
+            call.enqueue(new Callback<PGPaymentResponse>() {
+                @Override
+                public void onResponse(Call<PGPaymentResponse> call, Response<PGPaymentResponse> response) {
+
+                    if (response.body().getStatus().toString().equalsIgnoreCase("100")) {
+
+                        Utilities.dismissDialog();
+
+
+
+                        if (paystatus.equalsIgnoreCase("SUCCESS")) {
+
+                            PayLaterRazorPayNoCostEMIBank.this.finish();
+                        }
+
+                        if (paystatus.equalsIgnoreCase("FAILED")) {
+
+
+                            PayLaterRazorPayNoCostEMIBank.this.finish();
+
+                            if(errormessage.length()>1)
+                            {
+                                //Singleton.getInstance().showErrorLongToast(mContext, errormessage+"--11");
+                            }
+                            else
+                            {
+                                //Singleton.getInstance().showShortToast(mContext, "Payment Failed");
+                            }
+
+                        }
+
+
+                    } else {
+                        Utilities.dismissDialog();
+                        //singleton.getInstance().showShortToast(mContext, response.body().getMessage());
+                    }
+
+                }
+
+                @Override
+                public void onFailure(Call<PGPaymentResponse> call, Throwable t) {
+
+                    Utilities.dismissDialog();
+                }
+            });
+        } catch (Exception e) {
+            Toast.makeText(mContext, "Invalid request, Please try again.", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+
+}

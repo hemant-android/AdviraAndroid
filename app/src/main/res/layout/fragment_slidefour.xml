@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+    <ImageView
+        android:id="@+id/adviralogo"
+        android:layout_width="176dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="@dimen/dp_48"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/advirahealnew" />
+
+    <ImageView
+        android:id="@+id/farm_1"
+        android:layout_below="@+id/adviralogo"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_48"
+        app:srcCompat="@drawable/farm_1"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_below="@+id/farm_1"
+        android:layout_marginTop="@dimen/dp_32"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bringing Farm Closer to the Market"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:padding="2dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:textColor="@color/colorBlack"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/dp_32"
+        android:layout_marginRight="@dimen/dp_32"
+        android:textSize="16sp"
+        android:text="B2B2C Agri Commodity Marketplace"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/desc"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/screen_1"/>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_below="@+id/desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp_64"
+        android:orientation="horizontal"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/ind1"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ind2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/desc"
+            app:srcCompat="@drawable/seleted" />
+
+        <ImageView
+            android:id="@+id/ind2"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ind1"
+            app:layout_constraintEnd_toStartOf="@+id/ind3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/ind1"
+            app:layout_constraintTop_toTopOf="@+id/ind1"
+            app:srcCompat="@drawable/seleted" />
+
+        <ImageView
+            android:id="@+id/ind3"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ind2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/ind2"
+            app:layout_constraintTop_toTopOf="@+id/ind2"
+            app:srcCompat="@drawable/seleted" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_below="@+id/farm_1"
+        android:layout_marginLeft="46dp"
+        android:layout_toLeftOf="@+id/farm_1"
+        android:layout_marginRight="@dimen/dp_48"
+        app:srcCompat="@drawable/ic_back"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_toRightOf="@+id/farm_1"
+        android:layout_below="@+id/farm_1"
+        app:srcCompat="@drawable/ic_next"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

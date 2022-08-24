@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_delivery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_effect"
+            android:paddingLeft="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/iv_signup_header"
+                style="@style/txt_style_heading1l"
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:layout_marginHorizontal="@dimen/dimen_15dp"
+android:layout_marginVertical="16dp"
+android:src="@drawable/ic_arrow_back_24dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_delivery_header2"
+            style="@style/txt_style_heading4l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginVertical="15dp"
+            android:layout_toRightOf="@id/rl_back"
+            android:text="@string/del_header"
+            android:textColor="@color/colorPrimaryDark"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/ll_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_delivery"
+        android:layout_marginHorizontal="@dimen/dimen_10dp"
+        android:background="@color/colorWhite"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="5dp">
+
+
+        <TextView
+            android:id="@+id/tv_addid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_delivaddress"
+            style="@style/txt_style_heading3d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Delivery Address"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_add"
+            style="@style/txt_style_heading5d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_delivaddress"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_corners_border_dotted_blue"
+            android:padding="@dimen/dimen_10dp" />
+
+
+        <Button
+            android:id="@+id/btn_change"
+            style="@style/txt_style_heading4d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_add"
+            android:layout_marginVertical="15dp"
+            android:background="@drawable/button_selector"
+            android:text="CHANGE OR ADD NEW ADDRESS "
+            android:textColor="@color/colorYellow" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_membershipAds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_header"
+        android:layout_marginHorizontal="@dimen/dimen_10dp"
+        android:padding="@dimen/dimen_5dp"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:id="@+id/tv_adstitle"
+            style="@style/txt_style_heading5l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="5dp"
+            android:text="ADVIRA Elite Green"
+            android:textStyle="bold|italic"
+            />
+
+        <TextView
+            android:id="@+id/tv_adsname"
+            style="@style/txt_style_heading6l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/tv_adstitle"
+            android:textColor="@color/colorYellow"
+            android:layout_marginLeft="5dp"
+            android:textStyle="italic"
+            android:text="To get more benefits Join Membership"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_buyplan"
+            style="@style/txt_style_heading4d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginHorizontal="@dimen/dimen_5dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="@dimen/dimen_5dp"
+            android:text="Join Now"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:background="@drawable/border_grey_color_transparent"
+            android:backgroundTint="@color/colorYellow"
+            />
+
+        <CheckBox android:id="@+id/checkbox_cheese"
+            style="@style/txt_style_heading4d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorYellow"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_membershipAds"
+        android:layout_marginBottom="@dimen/dp_56">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_10dp">
+
+
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/cv_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dimen_10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_pro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dimen_5dp">
+
+
+                        <ImageView
+                            android:id="@+id/iv_product"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
+                            android:padding="4dp"
+                            android:src="@drawable/advirahealnew" />
+
+                        <ImageView
+                            android:id="@+id/iv_rx"
+                            android:layout_width="12dp"
+                            android:layout_height="18dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="-7dp"
+                            android:layout_marginTop="-3dp"
+                            android:layout_toEndOf="@+id/iv_product"
+                            android:src="@drawable/rx"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_productname"
+                            style="@style/txt_style_heading3d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_2dp"
+                            android:layout_toRightOf="@id/iv_rx"
+                            android:text="" />
+
+                        <TextView
+                            android:id="@+id/tv_composition"
+                            style="@style/txt_style_heading6d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_productname"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_toRightOf="@id/iv_product"
+                            android:text="Composition : "
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_productdetails"
+                            style="@style/txt_style_heading6d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_composition"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_toRightOf="@id/iv_product"
+                            android:text=""
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_pack"
+                            style="@style/txt_style_heading6d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_productname"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_toRightOf="@id/iv_product"
+                            android:text="" />
+
+                        <TextView
+                            android:id="@+id/tv_mrp"
+                            style="@style/txt_style_heading6d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_pack"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/iv_product"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_prodid"
+                            style="@style/txt_style_heading6d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_mrpval"
+                            style="@style/txt_style_heading6d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_pack"
+                            android:layout_toRightOf="@id/tv_mrp"
+                            android:background="@drawable/strike_through"
+                            android:text="" />
+
+                        <TextView
+                            android:id="@+id/tv_discountoff"
+                            style="@style/txt_style_heading6m"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_pack"
+                            android:layout_marginLeft="2dp"
+                            android:layout_toRightOf="@+id/tv_price"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="8dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_inr"
+                            style="@style/txt_style_heading6d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_pack"
+                            android:layout_toRightOf="@+id/tv_mrpval"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_price"
+                            style="@style/txt_style_heading6d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_pack"
+                            android:layout_marginLeft="@dimen/dimen_2dp"
+                            android:layout_toRightOf="@id/tv_inr"
+                            android:text="" />
+
+
+                        <TextView
+                            android:id="@+id/tv_qty"
+                            style="@style/txt_style_heading6d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_mrp"
+                            android:layout_marginLeft="@dimen/dimen_5dp"
+                            android:layout_toRightOf="@id/iv_product"
+                            android:text="Total Qty : 10" />
+
+
+                        <TextView
+                            android:id="@+id/tv_stock"
+                            style="@style/txt_style_heading5d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/iv_product"
+                            android:background="@color/colorThemeDark"
+                            android:paddingHorizontal="10dp"
+                            android:text="In Stock"
+                            android:visibility="gone" />
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/rl_coupon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cv_product"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorWhite"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_applycoupon"
+                    style="@style/txt_style_heading3d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Offers "
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/tv_selectdiscount"
+                    style="@style/txt_style_heading5d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_applycoupon"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="8dp"
+                    android:text="View offers"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_couponcode"
+                    style="@style/txt_style_heading5l"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_selectdiscount"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/addtocart_button_selector"
+                    android:backgroundTint="@color/colorGreymidlight"
+                    android:gravity="center"
+                    android:hint="Enter Couponcode"
+                    android:padding="@dimen/dimen_5dp"
+                    android:singleLine="true" />
+
+                <Button
+                    android:id="@+id/btn_apply"
+                    style="@style/txt_style_heading5d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/tv_selectdiscount"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/et_couponcode"
+                    android:background="@drawable/border_grey_color_transparent"
+                    android:backgroundTint="@color/colorYellow"
+                    android:text="Apply"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_remove"
+                    style="@style/txt_style_heading5d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/tv_selectdiscount"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/et_couponcode"
+                    android:background="@drawable/border_grey_color_transparent"
+                    android:backgroundTint="@color/colorYellow"
+                    android:text="Remove"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_content2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_coupon"
+                android:layout_marginVertical="10dp"
+                android:background="@color/colorWhite">
+
+                <View
+                    android:id="@+id/v_line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorGreymidlight" />
+
+                <TextView
+                    android:id="@+id/tv_pricedetail"
+                    style="@style/txt_style_heading3d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_line1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/cd_pricedetails"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/v_line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_pricedetail"
+                    android:layout_marginVertical="10dp"
+                    android:background="@color/colorGreymidlight" />
+
+                <TextView
+                    android:id="@+id/tv_pricetot"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_line2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Price Total" />
+
+                <TextView
+                    android:id="@+id/tv_priceval"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_line2"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="₹" />
+
+                <TextView
+                    android:id="@+id/tv_discount"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_pricetot"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Discount" />
+
+                <TextView
+                    android:id="@+id/tv_discountval"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_pricetot"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="₹" />
+
+                <TextView
+                    android:id="@+id/tv_gst"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_discount"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="GST Total"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_gstval"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_discount"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="+ ₹"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_delivery"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_gst"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Delivery Charges (i)" />
+
+                <TextView
+                    android:id="@+id/tv_deliveryval"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_gst"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text=""
+                    android:textColor="@color/colorGreen" />
+
+                <View
+                    android:id="@+id/v_line3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_delivery"
+                    android:layout_marginVertical="10dp"
+                    android:background="@color/colorGreymidlight" />
+
+                <TextView
+                    android:id="@+id/tv_totalpaid"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_line3"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="To be paid"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_totalpaidval"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_line3"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="₹"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_discountid"
+                    style="@style/txt_style_heading3d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_totalpaid"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_discount_coupon_name"
+                    style="@style/txt_style_heading3d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_totalpaid"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_discount_type"
+                    style="@style/txt_style_heading3d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_totalpaid"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_discount_amount"
+                    style="@style/txt_style_heading3d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_totalpaid"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_discount_details"
+                    style="@style/txt_style_heading3d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_totalpaid"
+                    android:visibility="gone" />
+
+
+                <Button
+                    android:id="@+id/btn_buynow"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_totalpaidval"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="20dp"
+                    android:background="@drawable/button_selector"
+                    android:text="@string/cd_checkout"
+                    android:textColor="@color/colorYellow"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:layout_alignParentBottom="true"
+        >
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigatin_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:background="@drawable/drop_shadow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:itemIconSize="22dp"
+            app:elevation="8dp"
+            app:itemTextColor="@color/colorPrimaryDark"
+            app:menu="@menu/bottom_navigation_menu"
+            app:labelVisibilityMode="labeled"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

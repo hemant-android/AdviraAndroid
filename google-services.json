@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "323085124147",
+    "project_id": "advirafarm",
+    "storage_bucket": "advirafarm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:323085124147:android:e2ad675db399a5a9c01946",
+        "android_client_info": {
+          "package_name": "com.advira.advirafarm.buyer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "323085124147-b0i6pe42pkb28sq3ct6r7hafsuvdpuhs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3u2VFxJbQTa5u6aLDak8j0NwxzvZHiFg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "323085124147-b0i6pe42pkb28sq3ct6r7hafsuvdpuhs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,114 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 10,
+    "identityHash": "5d5adf7ec0f14a17c4b9add34e7854da",
+    "entities": [
+      {
+        "tableName": "product_search",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`database_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `sku_id` TEXT, `productname` TEXT, `product_variety` TEXT, `product_units_id` TEXT, `product_units` TEXT, `product_unit_type` TEXT, `product_mrp` TEXT, `product_salesprice` TEXT, `product_discount` TEXT, `product_discount_label` TEXT, `product_image` TEXT, `product_instock` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "database_id",
+            "columnName": "database_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "skuId",
+            "columnName": "sku_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "productname",
+            "columnName": "productname",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "productVariety",
+            "columnName": "product_variety",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "productUnitsId",
+            "columnName": "product_units_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "productUnits",
+            "columnName": "product_units",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "productUnitType",
+            "columnName": "product_unit_type",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "productMrp",
+            "columnName": "product_mrp",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "productSalesprice",
+            "columnName": "product_salesprice",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "productDiscount",
+            "columnName": "product_discount",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "productDiscountLabel",
+            "columnName": "product_discount_label",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "productImage",
+            "columnName": "product_image",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "productInstock",
+            "columnName": "product_instock",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "database_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [
+          {
+            "name": "index_product_search_sku_id",
+            "unique": true,
+            "columnNames": [
+              "sku_id"
+            ],
+            "createSql": "CREATE UNIQUE INDEX `index_product_search_sku_id` ON `${TABLE_NAME}` (`sku_id`)"
+          }
+        ],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"5d5adf7ec0f14a17c4b9add34e7854da\")"
+    ]
+  }
+}

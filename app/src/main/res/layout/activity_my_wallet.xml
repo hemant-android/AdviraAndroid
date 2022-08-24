@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.wallet.MyWallet">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_wallethome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorYellow"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_effect"
+            android:paddingLeft="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/iv_signup_header"
+                style="@style/txt_style_heading1l"
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:layout_marginHorizontal="@dimen/dimen_15dp"
+                android:layout_marginVertical="16dp"
+                android:src="@drawable/ic_arrow_back_24dp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_headerlogo"
+            style="@style/txt_style_heading1l"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_toRightOf="@id/rl_back"
+            android:layout_marginLeft="10dp"
+            android:layout_marginVertical="15dp"
+            android:src="@drawable/splash_logo"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/tv_pd_header2"
+            style="@style/txt_style_heading4d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/dimen_2dp"
+            android:layout_toRightOf="@id/iv_headerlogo"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="My Wallet" />
+
+        <RelativeLayout
+            android:id="@+id/rl_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_effect"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginVertical="15dp">
+            <ImageView
+                android:id="@+id/iv_search"
+                style="@style/txt_style_heading1l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@color/colorPrimaryDark"
+                android:src="@drawable/ic_search_button_select" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_walletbalance"
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            android:background="@color/colorYellow"
+            android:layout_below="@+id/rl_wallethome"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/tv_wallettxt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="Total Wallet balance"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif"
+                />
+
+            <TextView
+                android:id="@+id/tvBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_wallettxt1"
+                android:text="₹0.00"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"/>
+
+                <TextView
+                    android:id="@+id/tvhistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvBalance"
+                    android:text="View history"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+
+                    />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_showbalance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="-25dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/white"
+            android:clipToPadding="true"
+            app:cardCornerRadius="5dp"
+            android:layout_below="@+id/rl_walletbalance"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_rewardbalance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginHorizontal="@dimen/dimen_10dp"
+                android:layout_marginVertical="@dimen/dimen_10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="0dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_epoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:text="Reward Points"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvEbalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:text="0.00"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_toRightOf="@+id/tv_epoint"
+                    android:gravity="right"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dimen_10dp"/>
+
+            </RelativeLayout>
+
+                <View
+                    android:id="@+id/v_line123"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:layout_height="1dp"
+                    android:background="@color/colorGreymidlight"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_below="@+id/rl_rewardbalance"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_cashbackbalance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginHorizontal="@dimen/dimen_10dp"
+                android:layout_marginVertical="@dimen/dimen_15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_below="@+id/v_line123"
+                >
+
+                <TextView
+                    android:id="@+id/tv_cashback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:text="Total Cashback"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvCashback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:text="0.00"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_toRightOf="@+id/tv_cashback"
+                    android:gravity="right"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_addmoney"
+            android:layout_below="@+id/cv_showbalance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/white"
+            android:clipToPadding="true"
+            app:cardCornerRadius="5dp"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_wallet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_outline_account_balance_wallet_24"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:layout_marginStart="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_wallet"
+                    android:text="Add Money in Wallet"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:textColor="@color/black"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_wallet"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="@dimen/dimen_10dp"
+                    android:background="@color/colorGreyVerylight"
+                    android:padding="@dimen/dimen_10dp">
+
+                    <TextView
+                        android:id="@+id/tv_rslogo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹ "
+                        android:textColor="@color/black"
+                        android:layout_centerVertical="true"
+                        android:textSize="24sp"/>
+
+                    <EditText
+                        android:id="@+id/et_rupees"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="@dimen/dimen_10dp"
+                        android:layout_toRightOf="@+id/tv_rslogo" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvAddMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:cardUseCompatPadding="true"
+            android:layout_centerHorizontal="true"
+            android:clipToPadding="true"
+            android:elevation="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/dimen_10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:paddingHorizontal="@dimen/dimen_10dp"
+                android:background="@drawable/button_selector">
+
+                <TextView
+                    android:id="@+id/addMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="Add Money"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/colorYellow"
+                    android:textSize="18sp"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

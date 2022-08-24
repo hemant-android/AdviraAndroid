@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.myaccount.Fragment.Membership_benefitsone">
+
+    <ImageView
+        android:id="@+id/farm_1"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/pngegg"
+        android:tint="@color/colorPrimaryDark"
+        />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_below="@+id/farm_1"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unlimited Free Delivery"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="17sp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:textColor="@color/colorBlack"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="15sp"
+        android:text="Get Unlimited free delivery with Elite membership"
+        />
+
+</RelativeLayout>

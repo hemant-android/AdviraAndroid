@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.registration.RegistrationCompleteActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_loginmain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginHorizontal="20dp">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_login2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true">
+            <ImageView
+                android:id="@+id/tv_circle"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:background="@drawable/kycdone_circleborder"/>
+
+
+            <ImageView
+                android:id="@+id/chk"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/animated_vector_check"/>
+
+
+
+            <TextView
+                android:id="@+id/tv_msg"
+                style="@style/txt_style_heading1d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chk"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="@string/docdone_header2"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_msg2"
+                style="@style/txt_style_heading4l"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_msg"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="@string/docdone_header3" />
+
+            <TextView
+                android:id="@+id/tv_msg3"
+                style="@style/txt_style_heading4l"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_msg2"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="@string/docdone_header4" />
+
+            <TextView
+                android:id="@+id/tv_msg4"
+                style="@style/txt_style_heading4l"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_msg3"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="@string/docdone_header5" />
+
+
+
+            <Button
+                android:id="@+id/btn_continueshopping"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_msg4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="@string/fp_donemsgbtn"
+                android:background="@drawable/button_selector"
+                style="@style/txt_style_heading2d"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"/>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

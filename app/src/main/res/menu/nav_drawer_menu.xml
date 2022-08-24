@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:id="@+id/group1">
+        <item
+            android:id="@+id/nav_home_id"
+            android:icon="@drawable/ic_home_menu_icon"
+            android:iconTint="@color/colorStatusbar"
+            android:iconTintMode="add"
+            android:title="Home" />
+    </group>
+
+    <group android:id="@+id/group2">
+        <item
+            android:id="@+id/nav_category_id"
+            android:icon="@drawable/ic_category_menu_icon"
+            android:iconTint="@color/colorStatusbar"
+            android:title="Shop By Category" />
+    </group>
+
+    <group android:id="@+id/group3">
+        <item
+            android:id="@+id/nav_shopbybusiness"
+            android:icon="@drawable/ic_shop_as_business_menu_icon_new"
+            android:iconTint="@color/colorStatusbar"
+            android:title="For Business" />
+    </group>
+    <group android:id="@+id/group4">
+        <item
+            android:id="@+id/nav_shopbyconsumer"
+            android:icon="@drawable/ic_shop_as_consumer_menu_icon"
+            android:iconTint="@color/colorStatusbar"
+            android:title="Shop As Consumer"
+            />
+    </group>
+    <group android:id="@+id/group5">
+        <item
+            android:id="@+id/nav_myaddress_id"
+            android:icon="@drawable/ic_address_menu_icon"
+            android:iconTint="@color/colorStatusbar"
+            android:title="My Address" />
+    </group>
+    <group android:id="@+id/group6">
+        <item
+            android:id="@+id/nav_myorders_id"
+            android:icon="@drawable/ic_orders_menu_icon"
+            android:iconTint="@color/colorStatusbar"
+            android:title="My Orders" />
+    </group>
+    <group android:id="@+id/group7">
+        <item
+            android:id="@+id/nav_profile_id"
+            android:icon="@drawable/ic_account_menu_icon"
+            android:iconTint="@color/colorStatusbar"
+            android:title="My Account" />
+    </group>
+
+    <group android:id="@+id/group8">
+        <item
+            android:id="@+id/nav_wallet_id"
+            android:icon="@drawable/ic_outline_account_balance_wallet_24"
+            android:iconTint="@color/colorStatusbar"
+            android:title="My Wallet" />
+    </group>
+
+    <group android:id="@+id/group9">
+        <item
+            android:id="@+id/nav_subscription"
+            android:icon="@drawable/memlogo_1"
+            android:iconTint="@color/colorStatusbar"
+            android:title="Advira Elite Green" />
+    </group>
+
+    <group android:id="@+id/group10">
+        <item
+            android:id="@+id/update_profile_id"
+            android:icon="@drawable/ic_account_menu_icon"
+            android:iconTint="@color/colorStatusbar"
+            android:title="Update Your Account " />
+    </group>
+
+    <group android:id="@+id/group11">
+        <item
+            android:id="@+id/nav_accountsettings_id"
+            android:icon="@drawable/ic_settings_menu_icon"
+            android:iconTint="@color/colorStatusbar"
+            android:title="Settings" />
+    </group>
+    <group android:id="@+id/group12">
+        <item
+            android:id="@+id/nav_customer_id"
+            android:icon="@drawable/whatsapp_png_2"
+            android:title="WhatsApp Us" />
+    </group>
+    <group android:id="@+id/group13">
+        <item
+            android:id="@+id/nav_customercall_id"
+            android:icon="@drawable/ic_baseline_call_24"
+            android:iconTint="@color/colorStatusbar"
+            android:title="Call Us" />
+    </group>
+    <group android:id="@+id/group14">
+        <item
+            android:id="@+id/nav_share_id"
+            android:icon="@drawable/ic_share_24dp"
+            android:iconTint="@color/colorStatusbar"
+            android:title="Share " />
+    </group>
+    <group android:id="@+id/group15">
+        <item
+            android:id="@+id/nav_logout_id"
+            android:icon="@drawable/ic_logout_menu_icon"
+            android:iconTint="@color/colorStatusbar"
+            android:title="Logout" />
+
+
+    </group>
+
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_version_id"
+                android:title="@string/version"
+                />
+
+        </menu>
+    </item>
+
+</menu>

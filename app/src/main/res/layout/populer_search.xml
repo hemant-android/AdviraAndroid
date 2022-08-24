@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:id="@+id/rl_populeritem"
+    android:background="@drawable/shadowbackground"
+    android:backgroundTint="@color/colorWhite"
+    android:layout_margin="@dimen/dimen_2dp"
+    android:paddingHorizontal="@dimen/dp_8"
+    android:paddingVertical="@dimen/dimen_3dp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_history"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="1dp"
+        android:src="@drawable/ic_history_black_48dp"
+        android:tint="@color/colorGreymidlight"/>
+
+    <TextView
+        android:id="@+id/tv_itemname"
+        android:text="Mango"
+        android:fontFamily="monospace"
+        android:textSize="@dimen/dimen_15dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/iv_history"
+        android:textColor="@color/colorGreymidlight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/iv_clear"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="1dp"
+        android:layout_toRightOf="@+id/tv_itemname"
+        android:src="@drawable/quantum_ic_clear_grey600_24"
+        android:visibility="gone"
+        android:tint="@color/colorGreymidlight"/>
+
+</RelativeLayout>

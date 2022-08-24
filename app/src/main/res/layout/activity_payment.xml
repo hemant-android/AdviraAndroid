@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.product.ProductDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_myacc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_effect"
+            android:paddingLeft="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/iv_pd_header"
+                style="@style/txt_style_heading1l"
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:layout_marginVertical="16dp"
+                android:layout_marginHorizontal="@dimen/dimen_15dp"
+                android:src="@drawable/ic_arrow_back_24dp" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/ma_header"
+            style="@style/txt_style_heading4l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/dimen_2dp"
+             android:layout_toRightOf="@id/rl_back"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="Payment Details" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/rl_signup2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_myacc"
+        android:layout_centerVertical="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_wallet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/wallets"
+                        style="@style/txt_style_heading4d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Wallets"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/v_line21"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/wallets"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorThemeLight" />
+
+                    <CheckBox
+                        android:id="@+id/tv_paytm"
+                        style="@style/txt_style_heading6d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/v_line21"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:drawableStart="@drawable/ic_paytm"
+                        android:drawablePadding="5dp"
+                        android:text="Paytm" />
+
+                    <View
+                        android:id="@+id/v_line22"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/tv_paytm"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorThemeLight" />
+
+                    <CheckBox
+                        android:id="@+id/tv_amazonpay"
+                        style="@style/txt_style_heading6d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/v_line22"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Amazon Pay" />
+
+                    <View
+                        android:id="@+id/v_line23"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/tv_amazonpay"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorThemeLight" />
+
+                    <CheckBox
+                        android:id="@+id/tv_freecharge"
+                        style="@style/txt_style_heading6d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/v_line23"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginVertical="10dp"
+                        android:text="Freecharge" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_upi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cv_wallet"
+                android:layout_margin="10dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/upi"
+                        style="@style/txt_style_heading4d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="UPI"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/v_line31"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/upi"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorThemeLight" />
+
+                    <CheckBox
+                        android:id="@+id/tv_googlepay"
+                        style="@style/txt_style_heading6d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/v_line31"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="GooglePay"
+                        android:drawableStart="@drawable/ic_googlepay"
+                        android:drawablePadding="5dp"/>
+
+                    <View
+                        android:id="@+id/v_line32"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/tv_googlepay"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorThemeLight" />
+
+                    <CheckBox
+                        android:id="@+id/tv_phonepe"
+                        style="@style/txt_style_heading6d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/v_line32"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Phonepe" />
+
+                    <View
+                        android:id="@+id/v_line33"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/tv_phonepe"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorThemeLight" />
+
+                    <CheckBox
+                        android:id="@+id/tv_bhim"
+                        style="@style/txt_style_heading6d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/v_line33"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginVertical="10dp"
+                        android:text="BHIM" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_cards"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cv_upi"
+                android:layout_margin="10dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/cards"
+                        style="@style/txt_style_heading4d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="NET BANKING &amp; CARDS"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/v_line41"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/cards"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorThemeLight" />
+
+                    <CheckBox
+                        android:id="@+id/tv_banking"
+                        style="@style/txt_style_heading6d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/v_line41"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="NetBanking" />
+
+                    <View
+                        android:id="@+id/v_line42"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/tv_banking"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorThemeLight" />
+
+                    <CheckBox
+                        android:id="@+id/tv_cards"
+                        style="@style/txt_style_heading6d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/v_line42"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginVertical="10dp"
+                        android:text="Credit &amp; Debit Cards" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cv_cards"
+                android:background="@color/colorWhite">
+
+                <TextView
+                    android:id="@+id/tv_totalsavingsval"
+                    style="@style/txt_style_heading5m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="To be paid ₹4500"
+                     />
+
+                <Button
+                    android:id="@+id/btn_buynow"
+                    style="@style/txt_style_heading3d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_totalsavingsval"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="20dp"
+                    android:background="@drawable/button_selector"
+                    android:text="@string/cd_protopay"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

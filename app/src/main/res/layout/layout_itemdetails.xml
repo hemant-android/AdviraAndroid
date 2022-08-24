@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+
+    <!--<androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="0dp">-->
+
+        <TableRow android:background="@color/white"
+            android:weightSum="4"
+            android:paddingLeft="@dimen/dimen_5dp"
+            android:paddingRight="@dimen/dimen_5dp"
+            android:paddingTop="@dimen/dimen_5dp">
+            <TextView
+                android:id="@+id/tv_srno"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:text=" "/>
+            <TextView
+                android:id="@+id/tv_productname"
+                style="@style/txt_style_heading5d"
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLines="2"
+                android:padding="@dimen/dimen_5dp"
+                android:textColor="@color/black"
+                android:text=" " />
+
+            <TextView
+                android:id="@+id/tv_pack"
+                style="@style/txt_style_heading5d"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/dimen_5dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:text=" " />
+
+            <TextView
+                android:id="@+id/tv_orderqty"
+                style="@style/txt_style_heading5d"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_5dp"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=" " />
+
+            <TextView
+                android:id="@+id/tv_price1"
+                style="@style/txt_style_heading5d"
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/dimen_5dp"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:text=" " />
+
+            <TextView
+                android:id="@+id/tv_price2"
+                style="@style/txt_style_heading5d"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/dimen_5dp"
+                android:textColor="@color/black"
+                android:text=" " />
+        </TableRow>
+    <!--</androidx.cardview.widget.CardView>-->
+
+</TableLayout>

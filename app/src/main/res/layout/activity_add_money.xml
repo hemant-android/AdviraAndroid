@@ -1,0 +1,1313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.wallet.AddMoney">
+
+    <RelativeLayout
+        android:id="@+id/rl_paymentoption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_effect"
+            android:paddingLeft="5dp">
+
+            <ImageView
+                android:id="@+id/iv_pd_header"
+                style="@style/txt_style_heading1l"
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:layout_marginHorizontal="@dimen/dimen_15dp"
+                android:layout_marginVertical="16dp"
+                android:src="@drawable/ic_arrow_back_24dp" />
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_headerlogo"
+            style="@style/txt_style_heading1l"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginVertical="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/rl_back"
+            android:src="@drawable/splash_logo"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/tv_pd_header2"
+            style="@style/txt_style_heading4d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_headerlogo"
+            android:paddingBottom="@dimen/dimen_2dp"
+            android:text="Add Money"
+            android:textColor="@color/colorPrimaryDark" />
+
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_wbalance"
+        android:layout_below="@+id/rl_paymentoption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/white"
+        android:clipToPadding="true"
+        app:cardCornerRadius="5dp"
+        android:visibility="gone"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Wallet Balance:"
+                android:paddingHorizontal="@dimen/dimen_10dp"
+                android:paddingVertical="@dimen/dimen_10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="0.00"
+                android:paddingHorizontal="@dimen/dimen_10dp"
+                android:paddingVertical="@dimen/dimen_10dp"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_addmoney"
+        android:layout_below="@+id/cv_wbalance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/white"
+        android:clipToPadding="true"
+        app:cardCornerRadius="5dp"
+        android:visibility="gone"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_wallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_outline_account_balance_wallet_24"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_wallet"
+            android:text="Advira's Wallet"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:textColor="@color/black"
+            />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_wallet"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="@dimen/dimen_10dp"
+                android:background="@color/colorGreyVerylight"
+                android:padding="@dimen/dimen_10dp">
+
+                <TextView
+                    android:id="@+id/tv_rslogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹ "
+                    android:layout_centerVertical="true"
+                    android:textSize="24sp"/>
+
+                <TextView
+                    android:id="@+id/tv_rupees1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text=""
+                    android:textSize="22sp"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:layout_toRightOf="@+id/tv_rslogo" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cv_addmoney"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/white"
+        android:clipToPadding="true"
+        app:cardCornerRadius="5dp"
+        app:cardUseCompatPadding="true">
+
+        <ScrollView
+            android:id="@+id/rl_signup2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/txt_amounttobepaid"
+            android:layout_centerVertical="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite">
+
+                <RelativeLayout
+                    android:id="@+id/cv_wallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10dp">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite">
+
+                        <TextView
+                            android:id="@+id/tv_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_5dp"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            android:text="Debit From "
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:visibility="gone" />
+
+                        <RadioGroup
+                            android:id="@+id/rg_wallet"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_title"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            android:orientation="vertical">
+
+                            <RadioButton
+                                android:id="@+id/rb_emi"
+                                style="@style/txt_style_heading4d"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="10dp"
+                                android:background="@color/colorGreyVerylight"
+                                android:drawableEnd="@drawable/ic_credit_card_logo"
+                                android:drawablePadding="5dp"
+                                android:paddingRight="10dp"
+                                android:text="Pay With EMI"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                            <RadioButton
+                                android:id="@+id/rb_nocostemi"
+                                style="@style/txt_style_heading4d"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_below="@id/rb_emi"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="10dp"
+                                android:background="@color/colorGreyVerylight"
+                                android:drawableEnd="@drawable/ic_credit_card_logo"
+                                android:drawablePadding="5dp"
+                                android:paddingRight="10dp"
+                                android:text="No Cost EMI"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cv_emicards"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/rb_nocostemi"
+                                android:layout_margin="10dp"
+                                android:visibility="gone">
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/colorWhite">
+
+                                        <RelativeLayout
+                                            android:id="@+id/rl_card"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="40dp"
+                                            android:background="@color/colorGreyVerylight"
+                                            android:visibility="gone">
+
+                                            <TextView
+                                                android:id="@+id/txt_creditcard"
+                                                style="@style/txt_style_heading6d"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentLeft="true"
+                                                android:layout_centerVertical="true"
+                                                android:layout_marginLeft="10dp"
+                                                android:drawableStart="@drawable/ic_card_24dp"
+                                                android:drawablePadding="5dp"
+                                                android:text="Pay with Credit Cards" />
+
+                                        </RelativeLayout>
+
+
+                                        <LinearLayout
+                                            android:id="@+id/ll_business"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/rl_card"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/tv_cardno"
+                                                style="@style/txt_style_heading5d"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_marginTop="10dp"
+                                                android:text="YOUR CARD NUMBER"
+                                                android:textStyle="bold" />
+
+
+                                            <EditText
+                                                android:id="@+id/et_cardno"
+                                                style="@style/txt_style_heading5d"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="40dp"
+                                                android:layout_marginHorizontal="10dp"
+                                                android:layout_marginTop="10dp"
+                                                android:background="@drawable/border_grey_color_transparent"
+                                                android:drawableEnd="@drawable/ic_field_credit_card_icon"
+                                                android:hint="XXXX XXXX XXXX XXXX"
+                                                android:inputType="number"
+                                                android:maxLength="19"
+                                                android:paddingHorizontal="10dp" />
+
+                                            <TextView
+                                                android:id="@+id/tv_cardname"
+                                                style="@style/txt_style_heading5d"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_marginTop="10dp"
+                                                android:text="NAME ON CARD"
+                                                android:textStyle="bold" />
+
+
+                                            <EditText
+                                                android:id="@+id/et_cardname"
+                                                style="@style/txt_style_heading5d"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="40dp"
+                                                android:layout_marginHorizontal="10dp"
+                                                android:layout_marginTop="10dp"
+                                                android:background="@drawable/border_grey_color_transparent"
+                                                android:hint="CARD HOLDER NAME"
+                                                android:paddingHorizontal="10dp" />
+
+
+                                            <LinearLayout
+                                                android:id="@+id/ll_validity"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:orientation="horizontal"
+                                                android:weightSum="3">
+
+                                                <TextView
+                                                    android:id="@+id/tv_cardyeasr"
+                                                    style="@style/txt_style_heading5d"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:layout_marginTop="10dp"
+                                                    android:layout_weight="1"
+                                                    android:text="EXPIRY MONTH"
+                                                    android:textStyle="bold" />
+
+
+                                                <TextView
+                                                    android:id="@+id/tv_cardmonth"
+                                                    style="@style/txt_style_heading5d"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:layout_marginTop="10dp"
+                                                    android:layout_weight="1"
+                                                    android:text="EXPIRY YEAR"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:id="@+id/tv_cardcvv"
+                                                    style="@style/txt_style_heading5d"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:layout_marginTop="10dp"
+                                                    android:layout_weight="1"
+                                                    android:text="CVV"
+                                                    android:textStyle="bold" />
+
+                                            </LinearLayout>
+
+
+                                            <LinearLayout
+                                                android:id="@+id/ll_unit"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginVertical="10dp"
+                                                android:orientation="horizontal"
+                                                android:weightSum="3">
+
+                                                <Spinner
+                                                    android:id="@+id/spn_month"
+                                                    style="@style/txt_style_heading5d"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="40dp"
+                                                    android:layout_marginHorizontal="10dp"
+                                                    android:layout_marginTop="10dp"
+                                                    android:layout_weight="1"
+                                                    android:background="@drawable/spinnerback_light"
+                                                    android:paddingHorizontal="10dp" />
+
+
+                                                <Spinner
+                                                    android:id="@+id/spn_year"
+                                                    style="@style/txt_style_heading5d"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="40dp"
+                                                    android:layout_marginHorizontal="10dp"
+                                                    android:layout_marginTop="10dp"
+                                                    android:layout_weight="1"
+                                                    android:background="@drawable/spinnerback_light"
+                                                    android:paddingHorizontal="10dp" />
+
+
+                                                <EditText
+                                                    android:id="@+id/et_cvv"
+                                                    style="@style/txt_style_heading5d"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="40dp"
+                                                    android:layout_marginHorizontal="10dp"
+                                                    android:layout_marginTop="10dp"
+                                                    android:layout_weight="1"
+                                                    android:background="@drawable/border_grey_color_transparent"
+                                                    android:drawableEnd="@drawable/ic_cvv_credit_card_icon"
+                                                    android:drawablePadding="5dp"
+                                                    android:hint="XXX"
+                                                    android:inputType="numberPassword"
+                                                    android:maxLength="4"
+                                                    android:paddingStart="10dp" />
+
+                                            </LinearLayout>
+
+                                            <TextView
+                                                android:id="@+id/tv_selecttenure"
+                                                style="@style/txt_style_heading5d"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_marginTop="10dp"
+                                                android:layout_weight="1"
+                                                android:text="Select EMI Tenure"
+                                                android:textStyle="bold" />
+
+                                            <Spinner
+                                                android:id="@+id/spn_emitenure"
+                                                style="@style/txt_style_heading5d"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="40dp"
+                                                android:layout_marginHorizontal="10dp"
+                                                android:layout_marginTop="10dp"
+                                                android:layout_weight="1"
+                                                android:background="@drawable/spinnerback_light"
+                                                android:paddingHorizontal="10dp" />
+
+
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl_creditlogos"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/rl_1">
+
+                                        <TextView
+                                            android:id="@+id/txt_credit"
+                                            style="@style/txt_style_heading6d"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginHorizontal="20dp"
+                                            android:layout_marginVertical="10dp"
+                                            android:text="We support domestic credit cards of following brands"
+                                            android:textColor="@color/colorGreymidlight"
+                                            android:textStyle="bold" />
+
+                                        <LinearLayout
+                                            android:id="@+id/ll_creditlogos"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/txt_credit"
+                                            android:layout_marginHorizontal="10dp"
+                                            android:layout_marginVertical="10dp"
+                                            android:orientation="horizontal"
+                                            android:weightSum="5">
+
+                                            <ImageView
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                android:layout_marginTop="-7dp"
+                                                android:layout_marginRight="5dp"
+                                                android:layout_weight="1"
+                                                android:src="@drawable/ic_visa_icons" />
+
+                                            <ImageView
+                                                android:layout_width="50dp"
+                                                android:layout_height="20dp"
+                                                android:layout_marginRight="5dp"
+                                                android:layout_weight="1"
+                                                android:src="@drawable/ic_rupay" />
+
+                                            <ImageView
+                                                android:layout_width="50dp"
+                                                android:layout_height="25dp"
+                                                android:layout_marginRight="5dp"
+                                                android:layout_weight="1"
+                                                android:src="@drawable/ic_maestro" />
+
+                                            <ImageView
+                                                android:layout_width="50dp"
+                                                android:layout_height="30dp"
+                                                android:layout_marginRight="5dp"
+                                                android:layout_weight="1"
+                                                android:src="@drawable/ic_dinersclub" />
+
+                                            <ImageView
+                                                android:layout_width="50dp"
+                                                android:layout_height="30dp"
+                                                android:layout_marginRight="5dp"
+                                                android:layout_weight="1"
+                                                android:src="@drawable/ic_master" />
+
+                                            <ImageView
+                                                android:layout_width="30dp"
+                                                android:layout_height="30dp"
+                                                android:layout_marginRight="5dp"
+                                                android:layout_weight="1"
+                                                android:src="@drawable/ic_americanexpress" />
+                                        </LinearLayout>
+
+
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+                            </androidx.cardview.widget.CardView>
+
+
+                            <RadioButton
+                                android:id="@+id/rb_upi"
+                                style="@style/txt_style_heading4d"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="10dp"
+                                android:background="@color/colorGreyVerylight"
+                                android:drawableEnd="@drawable/ic_upi_logo"
+                                android:drawablePadding="5dp"
+                                android:paddingRight="10dp"
+                                android:text="Pay with UPI"
+                                android:textStyle="bold" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cv_upi"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/rb_upi"
+                                android:layout_margin="1dp"
+                                android:visibility="gone">
+
+                                <LinearLayout
+                                    android:id="@+id/ll_upi"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <RadioGroup
+                                        android:id="@+id/rg_upi2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <RadioButton
+                                            android:id="@+id/rb_upiapps"
+                                            style="@style/txt_style_heading5d"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="40dp"
+                                            android:layout_alignParentLeft="true"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginHorizontal="10dp"
+                                            android:layout_marginTop="10dp"
+                                            android:text="Choose UPI Apps" />
+
+                                        <RelativeLayout
+                                            android:id="@+id/rl_upiapplogos"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:visibility="gone">
+
+
+                                            <LinearLayout
+                                                android:id="@+id/ll_applogos"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginHorizontal="10dp"
+                                                android:layout_marginVertical="10dp"
+                                                android:orientation="horizontal"
+                                                android:weightSum="5">
+
+                                                <ImageView
+                                                    android:id="@+id/iv_bhimlogo"
+                                                    android:layout_width="50dp"
+                                                    android:layout_height="20dp"
+                                                    android:layout_marginRight="5dp"
+                                                    android:layout_weight="1"
+                                                    android:src="@drawable/ic_bhim_logo" />
+
+                                                <ImageView
+                                                    android:id="@+id/iv_gpaylogo"
+                                                    android:layout_width="50dp"
+                                                    android:layout_height="20dp"
+                                                    android:layout_marginRight="5dp"
+                                                    android:layout_weight="1"
+                                                    android:src="@drawable/ic_googlepay_logo" />
+
+                                                <ImageView
+                                                    android:id="@+id/iv_phonepaylogo"
+                                                    android:layout_width="70dp"
+                                                    android:layout_height="20dp"
+                                                    android:layout_marginRight="5dp"
+                                                    android:layout_weight="1"
+                                                    android:src="@drawable/ic_phonepe_logo" />
+
+                                                <ImageView
+                                                    android:id="@+id/iv_paytmlogo"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginRight="5dp"
+                                                    android:layout_weight="1"
+                                                    android:src="@drawable/ic_paytm_logo" />
+
+                                                <ImageView
+                                                    android:id="@+id/iv_amazonlogo"
+                                                    android:layout_width="45dp"
+                                                    android:layout_height="15dp"
+                                                    android:layout_marginRight="5dp"
+                                                    android:layout_weight="1"
+                                                    android:src="@drawable/ic_amazon_pay_logo" />
+                                            </LinearLayout>
+
+                                            <TextView
+                                                style="@style/txt_style_heading6d"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@id/ll_applogos"
+                                                android:layout_marginHorizontal="20dp"
+                                                android:layout_marginTop="10dp"
+                                                android:text="We accept/support multiple UPI Apps"
+                                                android:textColor="@color/colorGreymidlight"
+                                                android:textStyle="bold" />
+
+                                        </RelativeLayout>
+
+                                        <RadioButton
+                                            android:id="@+id/rb_vpa"
+                                            style="@style/txt_style_heading5d"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="40dp"
+                                            android:layout_alignParentLeft="true"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginHorizontal="10dp"
+                                            android:layout_marginTop="10dp"
+                                            android:text="Pay with Other UPI ID" />
+
+
+                                        <RelativeLayout
+                                            android:id="@+id/ll_vpa"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/rb_vpa"
+                                            android:visibility="gone">
+
+                                            <TextView
+                                                android:id="@+id/tv_vpa"
+                                                style="@style/txt_style_heading5d"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_marginTop="10dp"
+                                                android:text="Enter UPI ID to Pay" />
+
+
+                                            <EditText
+                                                android:id="@+id/et_vpa"
+                                                style="@style/txt_style_heading5d"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="40dp"
+                                                android:layout_below="@id/tv_vpa"
+                                                android:layout_marginHorizontal="20dp"
+                                                android:layout_marginTop="10dp"
+                                                android:background="@drawable/border_grey_color_transparent"
+                                                android:hint="Enter your VPA/UPI ID"
+                                                android:paddingHorizontal="10dp" />
+
+                                            <TextView
+                                                android:id="@+id/tv_vpalbl"
+                                                style="@style/txt_style_heading6d"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@id/et_vpa"
+                                                android:layout_marginLeft="20dp"
+                                                android:layout_marginTop="5dp"
+                                                android:layout_marginBottom="10dp"
+                                                android:text="A collect request notification will be sent to this UPI ID"
+                                                android:textColor="@color/colorGreymidlight" />
+                                        </RelativeLayout>
+                                    </RadioGroup>
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+
+                            <RadioButton
+                                android:id="@+id/rb_wallets"
+                                style="@style/txt_style_heading4d"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="10dp"
+                                android:background="@color/colorGreyVerylight"
+                                android:drawableEnd="@drawable/ic_wallet_logo"
+                                android:drawablePadding="5dp"
+                                android:paddingRight="10dp"
+                                android:text="Pay with Wallets"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_wallets"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <RadioGroup
+                                    android:id="@+id/rg_wallet2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <RadioButton
+                                        android:id="@+id/rb_paytm"
+                                        style="@style/txt_style_heading6d"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginHorizontal="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@color/colorGreyVerylight"
+                                        android:drawableEnd="@drawable/ic_paytm_logo"
+                                        android:drawablePadding="5dp"
+                                        android:paddingRight="10dp"
+                                        android:text="Paytm" />
+
+
+                                    <RadioButton
+                                        android:id="@+id/rb_amazonpay"
+                                        style="@style/txt_style_heading6d"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginHorizontal="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@color/colorGreyVerylight"
+                                        android:drawableEnd="@drawable/ic_amazon_pay_logo"
+                                        android:drawablePadding="5dp"
+                                        android:paddingRight="10dp"
+                                        android:text="Amazon Pay"
+                                        android:visibility="gone" />
+
+
+                                    <RadioButton
+                                        android:id="@+id/rb_freecharge"
+                                        style="@style/txt_style_heading6d"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginHorizontal="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@color/colorGreyVerylight"
+                                        android:drawableEnd="@drawable/ic_freecharge_logo"
+                                        android:drawablePadding="5dp"
+                                        android:paddingRight="10dp"
+                                        android:text="Freecharge"
+                                        android:visibility="gone" />
+
+
+                                    <RadioButton
+                                        android:id="@+id/rb_phonepe"
+                                        style="@style/txt_style_heading6d"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginHorizontal="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@color/colorGreyVerylight"
+                                        android:drawableEnd="@drawable/ic_phonepe_logo"
+                                        android:drawablePadding="5dp"
+                                        android:paddingRight="10dp"
+                                        android:text="PhonePe" />
+
+                                    <RadioButton
+                                        android:id="@+id/rb_mobikwik"
+                                        style="@style/txt_style_heading6d"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginHorizontal="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@color/colorGreyVerylight"
+                                        android:drawableEnd="@drawable/ic_mobikwik_logo"
+                                        android:drawablePadding="5dp"
+                                        android:paddingRight="10dp"
+                                        android:text="MobiKwik"
+                                        android:visibility="gone" />
+
+
+                                    <RadioButton
+                                        android:id="@+id/rb_olamoney"
+                                        style="@style/txt_style_heading6d"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginHorizontal="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@color/colorGreyVerylight"
+                                        android:drawableEnd="@drawable/ola_money_logo"
+                                        android:drawablePadding="5dp"
+                                        android:paddingRight="10dp"
+                                        android:text="Ola Money"
+                                        android:visibility="gone" />
+
+
+                                    <RadioButton
+                                        android:id="@+id/rb_reliancejiomoney"
+                                        style="@style/txt_style_heading6d"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginHorizontal="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@color/colorGreyVerylight"
+                                        android:drawableEnd="@drawable/ic_jio_pay_logo"
+                                        android:drawablePadding="5dp"
+                                        android:paddingRight="10dp"
+                                        android:text="Reliance Jio Money"
+                                        android:visibility="gone" />
+
+
+                                    <RadioButton
+                                        android:id="@+id/rb_airtelmoney"
+                                        style="@style/txt_style_heading6d"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginHorizontal="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@color/colorGreyVerylight"
+                                        android:drawableEnd="@drawable/ic_airtel_logo"
+                                        android:drawablePadding="5dp"
+                                        android:paddingRight="10dp"
+                                        android:text="Airtel Money"
+                                        android:visibility="gone" />
+
+                                </RadioGroup>
+
+                            </LinearLayout>
+
+                            <RadioButton
+                                android:id="@+id/rb_debitcard"
+                                style="@style/txt_style_heading4d"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="10dp"
+                                android:background="@color/colorGreyVerylight"
+                                android:drawableEnd="@drawable/ic_credit_card_logo"
+                                android:drawablePadding="5dp"
+                                android:paddingRight="10dp"
+                                android:text="Pay with Debit/Credit Card"
+                                android:textStyle="bold" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cv_dcards"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:visibility="gone">
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+
+                                    <RelativeLayout
+                                        android:id="@+id/rl_debitcard"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/colorWhite">
+
+                                        <RelativeLayout
+                                            android:id="@+id/rl_dcard"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="40dp"
+                                            android:background="@color/colorGreyVerylight"
+                                            android:visibility="gone">
+
+                                            <TextView
+                                                android:id="@+id/txt_debitcard"
+                                                style="@style/txt_style_heading6d"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentLeft="true"
+                                                android:layout_centerVertical="true"
+                                                android:layout_marginLeft="10dp"
+                                                android:drawableStart="@drawable/ic_card_24dp"
+                                                android:drawablePadding="5dp"
+                                                android:text="Pay with Debit/Credit Cards" />
+
+                                        </RelativeLayout>
+
+
+                                        <LinearLayout
+                                            android:id="@+id/ll_dcard"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/rl_dcard"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/tv_dcardno"
+                                                style="@style/txt_style_heading5d"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_marginTop="10dp"
+                                                android:text="YOUR CARD NUMBER"
+                                                android:textStyle="bold" />
+
+
+                                            <EditText
+                                                android:id="@+id/et_dcardno"
+                                                style="@style/txt_style_heading5d"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="40dp"
+                                                android:layout_marginHorizontal="10dp"
+                                                android:layout_marginTop="10dp"
+                                                android:background="@drawable/border_grey_color_transparent"
+                                                android:drawableEnd="@drawable/ic_field_credit_card_icon"
+                                                android:hint="XXXX XXXX XXXX XXXX"
+                                                android:inputType="number"
+                                                android:maxLength="19"
+                                                android:paddingHorizontal="10dp" />
+
+                                            <TextView
+                                                android:id="@+id/tv_dcardname"
+                                                style="@style/txt_style_heading5d"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_marginTop="10dp"
+                                                android:text="NAME ON CARD"
+                                                android:textStyle="bold" />
+
+
+                                            <EditText
+                                                android:id="@+id/et_dcardname"
+                                                style="@style/txt_style_heading5d"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="40dp"
+                                                android:layout_marginHorizontal="10dp"
+                                                android:layout_marginTop="10dp"
+                                                android:background="@drawable/border_grey_color_transparent"
+                                                android:hint="CARD HOLDER NAME"
+                                                android:paddingHorizontal="10dp" />
+
+
+                                            <LinearLayout
+                                                android:id="@+id/ll_dvalidity"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:orientation="horizontal"
+                                                android:weightSum="3">
+
+                                                <TextView
+                                                    android:id="@+id/tv_dcardyeasr"
+                                                    style="@style/txt_style_heading5d"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:layout_marginTop="10dp"
+                                                    android:layout_weight="1"
+                                                    android:text="EXPIRY MONTH"
+                                                    android:textStyle="bold" />
+
+
+                                                <TextView
+                                                    android:id="@+id/tv_dcardmonth"
+                                                    style="@style/txt_style_heading5d"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:layout_marginTop="10dp"
+                                                    android:layout_weight="1"
+                                                    android:text="EXPIRY YEAR"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:id="@+id/tv_dcardcvv"
+                                                    style="@style/txt_style_heading5d"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:layout_marginTop="10dp"
+                                                    android:layout_weight="1"
+                                                    android:hint="XXX"
+                                                    android:text="CVV"
+                                                    android:textStyle="bold" />
+
+                                            </LinearLayout>
+
+
+                                            <LinearLayout
+                                                android:id="@+id/ll_dunit"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginVertical="10dp"
+                                                android:orientation="horizontal"
+                                                android:weightSum="3">
+
+                                                <Spinner
+                                                    android:id="@+id/spn_dmonth"
+                                                    style="@style/txt_style_heading5d"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="40dp"
+                                                    android:layout_marginHorizontal="10dp"
+                                                    android:layout_marginTop="10dp"
+                                                    android:layout_weight="1"
+                                                    android:background="@drawable/spinnerback_light"
+                                                    android:paddingHorizontal="10dp" />
+
+
+                                                <Spinner
+                                                    android:id="@+id/spn_dyear"
+                                                    style="@style/txt_style_heading5d"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="40dp"
+                                                    android:layout_marginHorizontal="10dp"
+                                                    android:layout_marginTop="10dp"
+                                                    android:layout_weight="1"
+                                                    android:background="@drawable/spinnerback_light"
+                                                    android:paddingHorizontal="10dp" />
+
+                                                <EditText
+                                                    android:id="@+id/et_dcvv"
+                                                    style="@style/txt_style_heading5d"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="40dp"
+                                                    android:layout_marginHorizontal="10dp"
+                                                    android:layout_marginTop="10dp"
+                                                    android:layout_weight="1"
+                                                    android:background="@drawable/border_grey_color_transparent"
+                                                    android:drawableEnd="@drawable/ic_cvv_credit_card_icon"
+                                                    android:drawablePadding="5dp"
+                                                    android:inputType="numberPassword"
+                                                    android:maxLength="4"
+                                                    android:paddingStart="10dp" />
+
+
+                                            </LinearLayout>
+
+
+                                        </LinearLayout>
+
+                                        <RelativeLayout
+                                            android:id="@+id/rl_debitlogos"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/ll_dcard">
+
+                                            <TextView
+                                                android:id="@+id/txt_debit"
+                                                style="@style/txt_style_heading6d"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginHorizontal="20dp"
+                                                android:layout_marginVertical="10dp"
+                                                android:text="We support domestic debit cards of following brands"
+                                                android:textColor="@color/colorGreymidlight"
+                                                android:textStyle="bold" />
+
+                                            <LinearLayout
+                                                android:id="@+id/ll_debitlogos"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@id/txt_debit"
+                                                android:layout_marginHorizontal="10dp"
+                                                android:layout_marginVertical="10dp"
+                                                android:orientation="horizontal"
+                                                android:weightSum="5">
+
+                                                <ImageView
+                                                    android:layout_width="40dp"
+                                                    android:layout_height="40dp"
+                                                    android:layout_marginTop="-7dp"
+                                                    android:layout_marginRight="5dp"
+                                                    android:layout_weight="1"
+                                                    android:src="@drawable/ic_visa_icons" />
+
+                                                <ImageView
+                                                    android:layout_width="50dp"
+                                                    android:layout_height="20dp"
+                                                    android:layout_marginRight="5dp"
+                                                    android:layout_weight="1"
+                                                    android:src="@drawable/ic_rupay" />
+
+                                                <ImageView
+                                                    android:layout_width="50dp"
+                                                    android:layout_height="25dp"
+                                                    android:layout_marginRight="5dp"
+                                                    android:layout_weight="1"
+                                                    android:src="@drawable/ic_maestro" />
+
+                                                <ImageView
+                                                    android:layout_width="50dp"
+                                                    android:layout_height="30dp"
+                                                    android:layout_marginRight="5dp"
+                                                    android:layout_weight="1"
+                                                    android:src="@drawable/ic_dinersclub" />
+
+                                                <ImageView
+                                                    android:layout_width="50dp"
+                                                    android:layout_height="30dp"
+                                                    android:layout_marginRight="5dp"
+                                                    android:layout_weight="1"
+                                                    android:src="@drawable/ic_master" />
+
+                                                <ImageView
+                                                    android:layout_width="30dp"
+                                                    android:layout_height="30dp"
+                                                    android:layout_marginRight="5dp"
+                                                    android:layout_weight="1"
+                                                    android:src="@drawable/ic_americanexpress" />
+                                            </LinearLayout>
+
+
+                                        </RelativeLayout>
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                            </androidx.cardview.widget.CardView>
+
+
+                            <RadioButton
+                                android:id="@+id/rb_netbanking"
+                                style="@style/txt_style_heading4d"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="10dp"
+                                android:background="@color/colorGreyVerylight"
+                                android:drawableEnd="@drawable/ic_net_banking_logo"
+                                android:drawablePadding="5dp"
+                                android:paddingRight="10dp"
+                                android:text="Pay with Net Banking"
+                                android:textStyle="bold" />
+
+                            <RadioButton
+                                android:id="@+id/rb_paylater"
+                                style="@style/txt_style_heading4d"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="10dp"
+                                android:background="@color/colorGreyVerylight"
+                                android:drawableEnd="@drawable/ic_pay_later_logo"
+                                android:drawablePadding="5dp"
+                                android:paddingRight="10dp"
+                                android:text="Pay Later"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/txt_availablecredit"
+                                style="@style/txt_style_heading6d"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="20dp"
+                                android:layout_marginVertical="10dp"
+                                android:text="Available Credit Limit"
+                                android:textColor="@color/colorGreymidlight"
+                                android:visibility="gone" />
+
+
+                            <RadioButton
+                                android:id="@+id/rb_cod"
+                                style="@style/txt_style_heading4d"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="10dp"
+                                android:background="@color/colorGreyVerylight"
+                                android:drawableEnd="@drawable/ic_pay_later_logo"
+                                android:drawablePadding="5dp"
+                                android:paddingRight="10dp"
+                                android:text="Pay On Delivery"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                        </RadioGroup>
+
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/cv_wallet"
+                    android:background="@color/colorGreyVerylight"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_secure"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ic_secure_payment_icon" />
+
+
+                    <TextView
+                        android:id="@+id/tv_safepayment"
+                        style="@style/txt_style_heading5d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_toRightOf="@id/iv_secure"
+                        android:text="Safe and Secure Payment. Easy returns 100% Authentic products" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cv_wallet"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:background="@drawable/button_selector"
+                    android:backgroundTint="@color/white">
+
+                    <TextView
+                        android:id="@+id/tv_rupees"
+                        style="@style/txt_style_heading3d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dimen_10dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="22sp" />
+
+                    <Button
+                        android:id="@+id/btn_proceedtopay"
+                        style="@style/txt_style_heading3d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="@dimen/dimen_5dp"
+                        android:background="@drawable/button_selector"
+                        android:paddingHorizontal="@dimen/dimen_10dp"
+                        android:text="Recharge Wallet"
+                        android:textColor="@color/colorYellow"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:id="@+id/bottom_sheet_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:background="@color/white"
+        >
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_15dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_detactotp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/tv_otpdesc"
+                style="@style/txt_style_heading3l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Verification Code"
+                android:textColor="@color/colorPrimaryDark"/>
+
+            <TextView
+                android:id="@+id/tv_otptime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_otpdesc"
+                android:visibility="gone"
+                android:text="0:30s" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_otpdetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_detactotp"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:gravity="center"
+            android:text="We have sent a 4-digit OTP on" />
+
+        <RelativeLayout
+            android:id="@+id/rl_mobileno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:layout_below="@+id/tv_otpdetails"
+            android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/tv_mobileno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+91 7827661058 "/>
+
+            <TextView
+                android:id="@+id/tv_changemobileno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_mobileno"
+                android:text="Edit"
+                android:textAllCaps="false"
+                android:textColor="@color/colorRed" />
+        </RelativeLayout>
+
+        <com.chaos.view.PinView
+            android:id="@+id/firstPinView"
+            style="@style/PinWidget.PinView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_mobileno"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:cursorVisible="true"
+            android:hint="Hint."
+            android:inputType="text"
+            android:padding="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:cursorColor="@color/colorPrimaryDark"
+            app:cursorWidth="2dp"
+            app:hideLineWhenFilled="true"
+            app:itemCount="4"
+            app:itemHeight="48dp"
+            app:itemRadius="4dp"
+            app:itemSpacing="4dp"
+            app:itemWidth="48dp"
+            app:lineColor="@color/colorPrimaryDark"
+            app:lineWidth="2dp"
+            app:viewType="rectangle" />
+
+        <TextView
+            android:id="@+id/tv_resend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/firstPinView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:text="Resend OTP"
+            android:textColor="@color/colorRed" />
+
+    </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/btn_buynow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/dimen_5dp"
+            android:elevation="4dp"
+            android:layout_below="@+id/rl_content"
+            android:layout_marginHorizontal="@dimen/dimen_10dp"
+            android:layout_marginVertical="@dimen/dimen_10dp"
+            android:background="@drawable/button_selector"
+            >
+
+            <TextView
+                android:id="@+id/tv_footertotal"
+                style="@style/txt_style_heading5l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/colorYellow"
+                android:layout_marginLeft="15dp"
+                android:text=""
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tv_duration"
+                style="@style/txt_style_heading5l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/tv_footertotal"
+                android:textColor="@color/colorYellow"
+                android:layout_marginLeft="15dp"
+                android:text=""
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tv_buyplan"
+                style="@style/txt_style_heading4d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/dimen_10dp"
+                android:gravity="center"
+                android:padding="@dimen/dimen_5dp"
+                android:text="Verify"
+                android:textAllCaps="false"
+                android:textColor="@color/colorYellow"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

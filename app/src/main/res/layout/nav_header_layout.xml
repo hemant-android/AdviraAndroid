@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorStatusbar"
+    android:gravity="bottom"
+    android:layout_marginTop="@dimen/dimen_20dp"
+    android:orientation="vertical"
+    android:paddingVertical="20dp"
+    android:paddingHorizontal="10dp">
+
+
+    <ImageView
+        android:id="@+id/iv_memimg"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/memlogo_1"
+        android:tint="@color/colorYellow"
+        />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/image_not_available"
+        app:civ_border_color="@color/colorWhite"
+        app:civ_border_width="2dp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/profile_image">
+
+
+        <TextView
+            android:id="@+id/tv_username"
+            style="@style/txt_style_heading4d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tv_memtype"
+            style="@style/txt_style_heading5d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_username"
+            android:textColor="@color/colorYellow"
+            android:textStyle="bold|italic"
+            android:visibility="gone"
+            android:text="ADVIRA Elite Green" />
+
+        <TextView
+            android:id="@+id/tv_mobile"
+            style="@style/txt_style_heading4d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_memtype"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tv_accountype"
+            style="@style/txt_style_heading4d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_mobile"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone"
+            android:text="" />
+
+
+    </RelativeLayout>
+    <!--<RelativeLayout
+        android:id="@+id/rl_memlogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/rl_mobile">
+        <ImageView
+            android:id="@+id/iv_memimg"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/memlogo_1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/dimen_2dp"
+            android:layout_marginTop="@dimen/dimen_2dp"
+            />
+
+    </RelativeLayout>
+-->
+
+</RelativeLayout>

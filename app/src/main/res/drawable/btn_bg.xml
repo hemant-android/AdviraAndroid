@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid android:color="@color/colorPrimaryDark"/>
+    <corners android:radius="7dp"/>
+
+    <selector >
+
+        <!-- Active tab -->
+        <item
+            android:drawable="@drawable/bg_selected"
+            android:state_focused="false"
+            android:state_pressed="false"
+            android:state_selected="true"/>
+
+        <!-- Inactive tab -->
+        <item android:drawable="@drawable/bg_unselected"
+            android:state_focused="false"
+            android:state_pressed="false"
+            android:state_selected="false"/>
+        <!-- Pressed tab -->
+        <item
+            android:drawable="@drawable/bg_focused"
+            android:state_pressed="true"/>
+
+        <!-- Selected tab (using d-pad) -->
+        <item
+            android:drawable="@drawable/bg_focused"
+            android:state_focused="true"
+            android:state_pressed="false"
+            android:state_selected="true"/>
+
+    </selector>
+</shape>

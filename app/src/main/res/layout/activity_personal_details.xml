@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.myaccount.PersonalDetailsEditActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_effect"
+            android:paddingLeft="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/iv_signup_header"
+                style="@style/txt_style_heading1l"
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:layout_marginVertical="15dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_arrow_back_24dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_signup_header2"
+            style="@style/txt_style_heading4d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/dimen_2dp"
+             android:layout_toRightOf="@id/rl_back"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="@string/rs1_personaldetails" />
+
+        <TextView
+            android:id="@+id/tv_skip"
+            style="@style/txt_style_heading4d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="4dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginVertical="15dp"
+            android:text="Skip"
+            android:textColor="@color/colorPrimaryDark"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_signupmain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_signup"
+        android:layout_marginHorizontal="20dp">
+
+
+        <ScrollView
+            android:id="@+id/rl_signup2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_signup_header4"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Name *" />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    style="@style/txt_style_heading4l"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_signup_header4"
+                    android:background="@drawable/editbox_selector"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="Full Name"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_name"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/su_email" />
+
+                <EditText
+                    android:id="@+id/et_email"
+                    style="@style/txt_style_heading4l"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_email"
+                    android:layout_marginTop="10dp"
+                    android:singleLine="true"
+                    android:hint="@string/su_email"
+                    android:background="@drawable/editbox_selector"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_dob"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_email"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/rs1_dobval" />
+
+
+                <EditText
+                    android:id="@+id/et_dob"
+                    style="@style/txt_style_heading4l"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_dob"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints="@string/rs1_dob"
+                    android:drawableEnd="@drawable/ic_calender_24dp"
+                    android:drawablePadding="5sp"
+                    android:drawableRight="@drawable/ic_calender_24dp"
+                    android:hint="@string/rs1_dob"
+                    android:imeOptions="actionDone"
+                    android:background="@drawable/editbox_selector"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:drawableTint="@color/colorPrimaryDark"/>
+
+                <TextView
+                    android:id="@+id/tv_gender"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_dob"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/rs1_gender" />
+
+                <RadioGroup
+                    android:id="@+id/rg_gender"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_gender"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <RadioButton
+                        android:id="@+id/rb_male"
+                        style="@style/txt_style_heading4d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_weight="0.5"
+                        android:checked="false"
+                        android:text="Male" />
+
+                    <RadioButton
+                        android:id="@+id/rb_female"
+                        style="@style/txt_style_heading4d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_weight="0.5"
+                        android:checked="false"
+                        android:text="Female" />
+                </RadioGroup>
+
+
+
+
+                <Button
+                    android:id="@+id/btn_edit"
+                    style="@style/txt_style_heading2d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rg_gender"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/button_selector"
+                    android:text="EDIT"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold" />
+
+
+                <Button
+                    android:id="@+id/btn_next"
+                    style="@style/txt_style_heading2d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rg_gender"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/button_selector"
+                    android:text="Save"
+                    android:textColor="@color/colorYellow"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

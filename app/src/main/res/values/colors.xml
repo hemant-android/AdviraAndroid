@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryold">#C6E70B</color>
+    <color name="colorPrimary">#2A882D</color>
+    <color name="colorStatusbarold">#67A016</color>
+    <color name="colorStatusbar">#0E2A01</color>
+    <color name="colorPrimaryDarkold">#67A016</color>
+    <color name="colorPrimaryDark">#2A882D</color>
+    <color name="colorAccent">#C6E70B</color>
+    <color name="colorThemeDarkold">#67A016</color>
+    <color name="colorThemeDark">#2A882D</color>
+    <color name="colorThemeMid">#B6EC66</color>
+    <color name="colorThemeLight">#B6EC66</color>
+    <color name="colorThemeLighttrans">#F2C3DBF3</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGreylight">#313131</color>
+    <color name="colorRed">#EC1C24</color>
+    <color name="colorRedLight">#FFC4C7</color>
+    <color name="colorBackgroundGrey">#F5F5F5</color>
+    <color name="colorSetting">#F0F1F2</color>
+    <color name="musterdYellow">#FFDB58</color>
+    <color name="amberYellow">#FFBF00</color>
+    <color name="honeydew">#F0FFF0</color>
+    <color name="azure">#F0FFFF</color>
+    <color name="oldlace">#FDF5E6</color>
+    <color name="shimmer_placeholder">#dddddd</color>
+
+    <color name="colorGreenVeryLight">#ebffec</color>
+    <color name="bottombuttonbgcolor">#EAF7D8</color>
+    <color name="addcartbuttonbgcolorold">#FFFBBC</color>
+    <color name="addcartbuttonbgcolor">#FFE500</color>
+    <color name="buttonbgcolor">#F77E0B</color>
+    <color name="buttonpressedbgcolor">#F9D039</color>
+
+    <color name="buttonpbgcolorlight">#FFFBBC</color>
+
+    <color name="darkGrey">#231F20</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGrey">#313131</color>
+    <color name="colorGreymidlight">#A5A5A5</color>
+    <color name="colorGreyVerylight">#f2f2f2</color>
+    <color name="homebgColor">#F6F7FB</color>
+    <color name="footerbackground">#F6F7FB</color>
+    <color name="userprofilebgcolor">#B6EC66</color>
+    <color name="borderlinecolor">#E7E7E7</color>
+    <color name="grayborderlinecolor">#D8D8D8</color>
+    <color name="cartplus">#65E9EC</color>
+
+
+
+    <color name="colorPurple">#652D90</color>
+    <color name="colorYellow">#FFF100</color>
+    <color name="colorGreen">#00973D</color>
+    <color name="colorGreenLight">#d6ffea</color>
+    <color name="colorGreenmidLight">#DAF7A6</color>
+    <color name="colorOrage">#F77E0B</color>
+    <color name="colorOrageNew">#F6921E</color>
+    <color name="colorBlue">#2E3191</color>
+    <color name="colorGolden">#d4af37</color>
+    <color name="colorblacktrans">#A6000000</color>
+
+    <!-- 100% — FF
+        95% — F2
+        90% — E6
+        85% — D9
+        80% — CC
+        75% — BF
+        70% — B3
+        65% — A6
+        60% — 99
+        55% — 8C
+        50% — 80
+        45% — 73
+        40% — 66
+        35% — 59
+        30% — 4D
+        25% — 40
+        20% — 33
+        15% — 26
+        10% — 1A
+        5%  — 0D
+        0% —  00-->
+</resources>

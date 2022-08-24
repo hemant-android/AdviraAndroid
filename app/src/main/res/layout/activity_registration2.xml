@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.registration.profile.RegistrationActivity2">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_effect"
+            android:paddingLeft="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/iv_signup_header"
+                style="@style/txt_style_heading1l"
+                android:layout_width="20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:layout_marginHorizontal="@dimen/dimen_15dp"
+                android:layout_marginVertical="16dp"
+                android:src="@drawable/ic_arrow_back_24dp" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_signup_header2"
+            style="@style/txt_style_heading4d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/dimen_2dp"
+            android:layout_toRightOf="@id/rl_back"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:text="@string/su_header" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_backmain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_signup"
+        android:layout_marginHorizontal="25dp">
+
+        <TextView
+            android:id="@+id/tv_signup_header3"
+            style="@style/txt_style_heading3d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:text="@string/su_createacc" />
+
+        <ScrollView
+            android:id="@+id/rl_back2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_signup_header3"
+            android:layout_centerVertical="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:id="@+id/rl_myacc2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_image"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/image_not_available"
+                        app:civ_border_color="@color/colorWhite"
+                        app:civ_border_width="2dp" />
+
+                    <ImageView
+                        android:id="@+id/img_add"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignEnd="@+id/profile_image"
+                        android:layout_alignBottom="@+id/profile_image"
+                        android:src="@drawable/add_profilepic" />
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_signup_header4"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_myacc2"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/su_entername" />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    style="@style/txt_style_heading4l"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_signup_header4"
+                    android:background="@drawable/editbox_selector"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="Full Name"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_name"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/su_email" />
+
+                <EditText
+                    android:id="@+id/et_email"
+                    style="@style/txt_style_heading4l"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_email"
+                    android:layout_marginTop="10dp"
+                    android:singleLine="true"
+                    android:hint="@string/su_email"
+                    android:background="@drawable/editbox_selector"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_regissteras"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_email"
+                    android:layout_marginTop="20dp"
+                    android:text="Sign Up As"
+                    android:visibility="gone"
+                    />
+
+                <Spinner
+                    android:id="@+id/spn_registeras"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_regissteras"
+                    android:layout_marginTop="10dp" />
+                <View
+                    android:id="@+id/v_line11"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/spn_registeras"
+                    android:background="@drawable/multicolor_line"
+                    android:visibility="gone"/>
+
+
+                <TextView
+                    android:id="@+id/tv_dob"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/v_line11"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/rs1_dobval" />
+
+
+                <EditText
+                    android:id="@+id/et_dob"
+                    style="@style/txt_style_heading4l"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_dob"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints="@string/rs1_dob"
+                    android:drawableEnd="@drawable/ic_calender_24dp"
+                    android:drawablePadding="5sp"
+                    android:drawableRight="@drawable/ic_calender_24dp"
+                    android:hint="@string/rs1_dob"
+                    android:imeOptions="actionDone"
+                    android:background="@drawable/editbox_selector"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:drawableTint="@color/colorPrimaryDark"/>
+
+                <TextView
+                    android:id="@+id/tv_gender"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_dob"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/rs1_gender" />
+
+                <RadioGroup
+                    android:id="@+id/rg_gender"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_gender"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <RadioButton
+                        android:id="@+id/rb_male"
+                        style="@style/txt_style_heading4d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_weight="0.5"
+                        android:checked="false"
+                        android:text="Male" />
+
+                    <RadioButton
+                        android:id="@+id/rb_female"
+                        style="@style/txt_style_heading4d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_weight="0.5"
+                        android:checked="false"
+                        android:text="Female" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/tv_newpassword"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rg_gender"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/su_crenpass" />
+
+                <EditText
+                    android:id="@+id/et_newpassword"
+                    style="@style/txt_style_heading4l"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_newpassword"
+                    android:layout_marginTop="10dp"
+                    android:drawableEnd="@drawable/ic_visibility_off_24dp"
+                    android:drawableRight="@drawable/ic_visibility_off_24dp"
+                    android:hint="@string/su_crenpass"
+                    android:background="@drawable/editbox_selector"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:inputType="textPassword" />
+
+                <TextView
+                    android:id="@+id/tv_conpassword"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_newpassword"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/su_connpass" />
+
+                <EditText
+                    android:id="@+id/et_conpassword"
+                    style="@style/txt_style_heading4l"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_conpassword"
+                    android:layout_marginTop="10dp"
+                    android:drawableEnd="@drawable/ic_visibility_off_24dp"
+                    android:drawableRight="@drawable/ic_visibility_off_24dp"
+                    android:hint="@string/su_connpass"
+                    android:background="@drawable/editbox_selector"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:inputType="textPassword" />
+
+                <Button
+                    android:id="@+id/btn_continue"
+                    style="@style/txt_style_heading2d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_conpassword"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/button_selector"
+                    android:text="Save"
+                    android:textColor="@color/colorYellow"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_terms"
+                    style="@style/txt_style_heading6l"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/btn_continue"
+                    android:layout_marginVertical="20dp"
+                    android:textAlignment="center"
+                    android:text="tv_terms" />
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

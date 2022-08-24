@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.registration.profile.BusinessDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_effect"
+            android:paddingLeft="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/iv_signup_header"
+                style="@style/txt_style_heading1l"
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:layout_marginHorizontal="@dimen/dimen_15dp"
+                android:layout_marginVertical="16dp"
+                android:src="@drawable/ic_arrow_back_24dp"
+                />
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/tv_signup_header2"
+            style="@style/txt_style_heading4d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/dimen_2dp"
+            android:layout_toRightOf="@id/rl_back"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/rs1_businessdetails"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_skiplogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ripple_effect"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tv_skip"
+                style="@style/txt_style_heading5l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Skip"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/tv_skip"
+                android:src="@drawable/ic_arrow_right_blue_24dp" />
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_signupmain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_signup"
+        android:layout_marginHorizontal="25dp">
+
+        <ScrollView
+            android:id="@+id/rl_signup2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat">
+
+
+                <TextView
+                    android:id="@+id/tv_unit"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/rs2_unitcompany" />
+
+                <EditText
+                    android:id="@+id/et_unit"
+                    style="@style/txt_style_heading4l"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_unit"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/editbox_selector"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:autofillHints="@string/rs2_unitcompany"
+                    android:hint="@string/rs2_unitcompany" />
+
+
+             <!--   <TextView
+                    android:id="@+id/tv_email"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_unit"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/rs2_officialemail" />
+
+                <EditText
+                    android:id="@+id/et_email"
+                    style="@style/txt_style_heading4l"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_email"
+                    android:layout_marginTop="10dp"
+                    android:singleLine="true"
+                    android:hint="@string/rs2_officialemail"
+                    android:padding="8dp" />-->
+
+
+                <TextView
+                    android:id="@+id/tv_gstyesno"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_unit"
+                    android:layout_marginTop="20dp"
+                    android:text="GST Certificate" />
+
+                <RadioGroup
+                    android:id="@+id/rg_gst"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_gstyesno"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <RadioButton
+                        android:id="@+id/rb_gstyes"
+                        style="@style/txt_style_heading4d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_weight="0.5"
+                        android:checked="false"
+                        android:text="YES" />
+
+                    <RadioButton
+                        android:id="@+id/rb_gstno"
+                        style="@style/txt_style_heading4d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_weight="0.5"
+                        android:checked="false"
+                        android:text="No" />
+                </RadioGroup>
+
+
+                <TextView
+                    android:id="@+id/tv_gst"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rg_gst"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/rs2_gstno" />
+
+                <EditText
+                    android:id="@+id/et_gst"
+                    style="@style/txt_style_heading4l"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_gst"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints="@string/rs2_gstno"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+                    android:hint="@string/rs2_gstno"
+                    android:background="@drawable/editbox_selector"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:inputType="textNoSuggestions"
+                    android:maxLength="16" />
+
+
+                <TextView
+                    android:id="@+id/tv_fssai"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_gst"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/rs2_fssai" />
+
+                <EditText
+                    android:id="@+id/et_fssai"
+                    style="@style/txt_style_heading4l"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_fssai"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints="@string/rs2_fssai"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890/,"
+                    android:hint="@string/rs2_fssai"
+                    android:inputType="textNoSuggestions"
+                    android:background="@drawable/editbox_selector"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:maxLength="20" />
+
+                <TextView
+                    android:id="@+id/tv_fssaiexpiry"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_fssai"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="FSSAI License Expiry" />
+
+                <EditText
+                    android:id="@+id/et_fssaiexpiry"
+                    style="@style/txt_style_heading4l"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_fssaiexpiry"
+                    android:layout_marginTop="10dp"
+                    android:drawableEnd="@drawable/ic_calender_24dp"
+                    android:drawablePadding="5sp"
+                    android:drawableRight="@drawable/ic_calender_24dp"
+                    android:hint="FSSAI License expiry date"
+                    android:imeOptions="actionDone"
+                    android:background="@drawable/editbox_selector"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:drawableTint="@color/colorPrimaryDark"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_landline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_fssaiexpiry"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/tv_contrycode"
+                        style="@style/txt_style_heading4d"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:fontFamily="@font/montserrat"
+                        android:visibility="gone"
+                        android:text="@string/rs2_countrycode" />
+
+                    <EditText
+                        android:id="@+id/et_contrycode"
+                        style="@style/txt_style_heading4l"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@id/tv_contrycode"
+                        android:visibility="gone"
+                        android:layout_marginTop="10dp"
+                        android:enabled="false"
+                        android:hint="+91"
+                        android:background="@drawable/editbox_selector"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/tv_stdcode"
+                        style="@style/txt_style_heading4d"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/et_contrycode"
+                        android:visibility="gone"
+                        android:fontFamily="@font/montserrat"
+                        android:text="@string/rs2_std" />
+
+
+                    <EditText
+                        android:id="@+id/et_stdcode"
+                        style="@style/txt_style_heading4l"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_stdcode"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/et_contrycode"
+                        android:visibility="gone"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:background="@drawable/editbox_selector"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textAlignment="center" />
+
+
+                    <TextView
+                        android:id="@+id/tv_landline"
+                        style="@style/txt_style_heading4d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Contact Number" />
+
+                    <EditText
+                        android:id="@+id/et_landline"
+                        style="@style/txt_style_heading4l"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_landline"
+                        android:layout_marginTop="10dp"
+                        android:inputType="number"
+                        android:background="@drawable/editbox_selector"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:maxLength="14" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_corporateaddress"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_landline"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/rs2_corporateaddress" />
+
+                <TextView
+                    android:id="@+id/tv_flat"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_corporateaddress"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/rs2_flat" />
+
+                <EditText
+                    android:id="@+id/et_flat"
+                    style="@style/txt_style_heading4l"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_flat"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/editbox_selector"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:autofillHints="@string/rs2_flat"
+                    android:hint="@string/rs1_flat" />
+
+                <TextView
+                    android:id="@+id/tv_street"
+                    style="@style/txt_style_heading4d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_flat"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/rs2_street" />
+
+                <EditText
+                    android:id="@+id/et_street"
+                    style="@style/txt_style_heading4l"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_street"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/editbox_selector"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:autofillHints="@string/rs2_street"
+                    android:hint="@string/rs1_street" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_castatecity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_street"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/tv_castate"
+                        style="@style/txt_style_heading4d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:text="@string/rs2_state" />
+
+                    <Spinner
+                        android:id="@+id/spn_castate"
+                        style="@style/txt_style_heading4d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/tv_castate" />
+
+                    <View
+                        android:id="@+id/v_line11"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/spn_castate"
+                        android:background="@drawable/multicolor_line" />
+                    <TextView
+                        android:id="@+id/tv_cacity"
+                        style="@style/txt_style_heading4d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/v_line11"
+                        android:fontFamily="@font/montserrat"
+                        android:text="@string/rs2_city" />
+
+                    <Spinner
+                        android:id="@+id/spn_cacity"
+                        style="@style/txt_style_heading4d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/tv_cacity" />
+
+
+                    <View
+                        android:id="@+id/v_line21"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/spn_cacity"
+                        android:background="@drawable/multicolor_line" />
+
+
+                    <TextView
+                        android:id="@+id/tv_capin"
+                        style="@style/txt_style_heading4d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/v_line21"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="@string/rs2_pincode" />
+
+
+                    <AutoCompleteTextView
+                        android:id="@+id/et_capin"
+                        style="@style/txt_style_heading4l"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_capin"
+                        android:layout_marginTop="10dp"
+                        android:hint="@string/rs2_pincode"
+                        android:inputType="number"
+                        android:maxLength="6" />
+
+                </RelativeLayout>
+
+
+                <Button
+                    android:id="@+id/btn_edit"
+                    style="@style/txt_style_heading2d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_castatecity"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/button_selector"
+                    android:text="EDIT"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_next"
+                    style="@style/txt_style_heading2d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_castatecity"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/button_selector"
+                    android:text="SAVE"
+                    android:textColor="@color/colorYellow"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

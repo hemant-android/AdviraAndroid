@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <item
+        android:id="@+id/category"
+        android:enabled="true"
+        android:icon="@drawable/btm_nav_category_selector"
+        android:iconTint="@color/colorGrey"
+        android:title="Category"/>
+
+    <item
+        android:id="@+id/home_subscription"
+        android:enabled="true"
+        android:icon="@drawable/btm_nav_subscribe_seletor"
+        android:iconTint="@color/grayborderlinecolor"
+        android:title="My Plan"/>
+
+    <item
+        android:id="@+id/home_btmnav"
+        android:enabled="true"
+        android:icon="@drawable/btm_nav_home_seletor"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/home_wallet"
+        android:enabled="true"
+        android:icon="@drawable/btm_nav_wallet_seletor"
+        android:iconTint="@color/grayborderlinecolor"
+        android:title="Wallet"/>
+
+    <item
+        android:id="@+id/tokri"
+        android:enabled="true"
+        android:icon="@drawable/btm_nav_cart_selector"
+        android:title="Tokri"/>
+
+</menu>

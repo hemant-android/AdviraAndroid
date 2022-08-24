@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_myorders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_effect"
+            android:paddingLeft="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/iv_signup_header"
+                style="@style/txt_style_heading1l"
+                android:layout_width="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_20dp"
+                android:layout_marginHorizontal="@dimen/dimen_15dp"
+                android:layout_marginVertical="16dp"
+                android:src="@drawable/ic_arrow_back_24dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/ma_header"
+            style="@style/txt_style_heading4l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="@dimen/dimen_2dp"
+            android:layout_toRightOf="@id/rl_back"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="My Orders" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_myorders"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        android:paddingVertical="10dp"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tv_tab1"
+            style="@style/txt_style_heading5d"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Order List"
+            android:textAlignment="center"
+            android:textColor="@color/colorThemeDark"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_tab2"
+            style="@style/txt_style_heading5d"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Membership "
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_tabdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_tab"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <View
+            android:id="@+id/v_linetab1"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_below="@id/ll_tab"
+            android:layout_weight="1"
+            android:background="@color/colorOrageNew" />
+
+        <View
+            android:id="@+id/v_linetab2"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_below="@id/ll_tab"
+            android:layout_weight="1"
+            android:background="@color/colorOrageNew"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/ma_headerq"
+        style="@style/txt_style_heading4d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@id/ll_tabdown"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="15dp"
+        android:text="Select the item you want to track, return or need help with" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mem_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ma_headerq"
+        android:layout_marginTop="10dp"
+        android:scrollbars="horizontal">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mem_recyclerView"
+        android:layout_marginTop="10dp"
+        android:scrollbars="vertical">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/rl_noitems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:id="@+id/iv_blankcart"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/tokri_colored_4x"
+            />
+
+        <TextView
+            android:id="@+id/tv_blankcart"
+            android:layout_below="@id/iv_blankcart"
+            style="@style/txt_style_heading3d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="20dp"
+            android:text="You haven't placed any order yet"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

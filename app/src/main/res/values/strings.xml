@@ -1,0 +1,314 @@
+<resources>
+    <string name="app_name">Advira</string>
+    <string name="gcm_api_key">AIzaSyB3u2VFxJbQTa5u6aLDak8j0NwxzvZHiFg</string>
+
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <string name="toolbar_title">Close Navigation Drawer</string>
+
+    <!--Login Screen-->
+
+    <string name="version">"Version: 1.1.30"</string>
+    <string name="ls_header1">"WELCOME TO ADVIRA"</string>
+    <string name="ls_header2">"Join India's Largest Wholesale and Trading Market"</string>
+    <string name="ls_header3">"Sign in with email id / mobile number"</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email id / Phone No.</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">SIGN IN</string>
+    <string name="action_forgotpass">Forgot Password?</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="login_donthaveacc">"Don't have an account ?"</string>
+    <string name="login_withotp">"Login with OTP"</string>
+    <string name="login_sign_up">"Sign Up"</string>
+    <string name="login_first_time_user">"First time user ?"</string>
+    <string name="tv_welcome_iFarm">"WELCOME TO iFARM"</string>
+    <string name="tv_login">"Login"</string>
+    <string name="tv_skip">"SKIP"</string>
+
+    <!--Registration Screen-->
+    <string name="su_header">"Sign Up"</string>
+    <string name="su_createacc">"Create your Advira Account"</string>
+    <string name="su_selectbusiness">"Select Business *"</string>
+    <string name="su_fname">"First Name"</string>
+    <string name="su_lname">"Last Name"</string>
+    <string name="su_email">"Email ID "</string>
+    <string name="su_sendotp">Send OTP</string>
+    <string name="su_ccode">"Code"</string>
+    <string name="su_ccodeval">"IN (+91)"</string>
+    <string name="su_mobile">"Mobile No"</string>
+    <string name="su_entermobileno">"Enter Mobile Number"</string>
+    <string name="su_entername">"Enter Name *"</string>
+    <string name="su_businessname">"Full Name/Business Name"</string>
+    <string name="su_mobileval">"9910099786"</string>
+    <string name="su_crenpass">"Create New Password *"</string>
+    <string name="su_connpass">"Confirm New Password"</string>
+    <string name="su_">"Sign Up"</string>
+    <string name="su_tnclbt">"I have read and agree to comply with and/or be bound by the terms and conditions of Advira (B2B) Terms &amp; Conditions"</string>
+    <string name="su_tnclbl">"Advira (B2B) Terms &amp; Conditions"</string>
+    <string name="su_continue">"Continue"</string>
+    <string name="su_alreadyreg">"Already Registered? "</string>
+    <string name="su_loginhere">"Login Here"</string>
+
+    <!--OTP Verification Mobile Email-->
+    <string name="otp_header">"Verify Yourself"</string>
+    <string name="otp_verify">"Verify Your Mobile"</string>
+    <string name="otp_sms">"SMS with an OTP has been sent to your mobile number"</string>
+    <string name="otp_mobile">"+91 9910045408"</string>
+    <string name="otp_email">"nirmal.kumar@adviratech.com"</string>
+    <string name="otp_mobotp">"Enter Mobile OTP"</string>
+    <string name="otp_didnotmob">"Didn't receive mobile OTP code!"</string>
+    <string name="otp_emailotp">"Enter Email OTP"</string>
+    <string name="otp_didnotemail">"Did not receive email OTP code!"</string>
+    <string name="otp_resend">"RESEND OTP"</string>
+    <string name="otp_verifynow">"Verify Now"</string>
+    <string name="otp_verified">"Your Mobile Number is successfully verified"</string>
+
+
+    <!--Registration Screen 1-->
+    <string name="rs1_header">"Registration"</string>
+    <string name="rs1_personaldetails">"Personal Details"</string>
+    <string name="rs1_businessdetails">"Business Details"</string>
+    <string name="rs1_uploaddocuments">"Upload Documents"</string>
+    <string name="rs1_country">"Country"</string>
+    <string name="rs1_fname">"First Name"</string>
+    <string name="rs1_lname">"Last Name"</string>
+    <string name="rs1_ffname">"Father First Name"</string>
+    <string name="rs1_flname">"Father Last Name"</string>
+    <string name="rs1_ccode">"Code"</string>
+    <string name="rs1_ccodeval">"IN (+91)"</string>
+    <string name="rs1_mobile">"Mobile No"</string>
+    <string name="rs1_mobileval">"9910099786"</string>
+    <string name="rs1_email">"Email ID"</string>
+    <string name="rs1_dob">DD/MM/YYYY</string>
+    <string name="rs1_dobval">"Date of Birth"</string>
+    <string name="rs1_gender">"Gender"</string>
+    <string name="rs1_pan">"Pan Card No."</string>
+    <string name="rs1_pancard">"Pan Card"</string>
+    <string name="rs1_aadhar">"Aadhar Card No."</string>
+    <string name="rs1_currentaddress">"Current Address"</string>
+    <string name="rs1_flat">"Enter Flat / Apartment/House Number"</string>
+    <string name="rs1_street">"Enter Street / Landmark"</string>
+    <string name="rs1_state">"Select State"</string>
+    <string name="rs1_city">"Select City "</string>
+    <string name="rs1_pincode">"Pincode"</string>
+    <string name="rs1_permanentaddress">"Permanent Address"</string>
+    <string name="rs1_mypermanent">"My Permanent address is same as current address"</string>
+    <string name="rs1_next">"NEXT"</string>
+
+
+    <string name="service_not_available">Service not available ..check network connection</string>
+    <string name="no_address_found">No address found</string>
+    <string name="address_found">address found</string>
+    <string name="not_support_area">This area is not supported yet</string>
+    <string name="confirm_location">Confirm Location</string>
+    <string name="search_place">Search a place</string>
+    <string name="confirm_pickup">Confirm pickup</string>
+    <string name="confirm_dest">Confirm destination</string>
+    <string name="failed_select_location">failed to select location please try again</string>
+
+    <!--Registration Screen 2-->
+    <string name="rs2_header">"Registration"</string>
+    <string name="rs2_unitcompany">"Unit or Company Name"</string>
+    <string name="rs2_businesslegal">"Business Legal Entity Type"</string>
+    <string name="rs2_business">"Business"</string>
+    <string name="rs2_businesscategory">"Business Category"</string>
+    <string name="rs2_companypan">"Company PAN Card Number"</string>
+    <string name="rs2_fssai">"FSSAI License Number"</string>
+    <string name="rs2_gstno">"GST Number"</string>
+    <string name="rs2_iecno">"Trading Number (IEC Code Number)"</string>
+    <string name="rs2_companyincor">"Company Incorporation Date"</string>
+    <string name="rs2_ageofbusiness">"Age of Business"</string>
+    <string name="rs2_officialemail">"Official Email ID"</string>
+    <string name="rs2_countrycode">"Country Code"</string>
+    <string name="rs2_std">"STD Code"</string>
+    <string name="rs2_landline">"Registered Landline"</string>
+    <string name="rs2_corporateaddress">"Business Address"</string>
+    <string name="rs2_registeredaddress">"Registered Office Address"</string>
+    <string name="rs2_flat">"Address Line 1"</string>
+    <string name="rs2_street">"Address Line 2"</string>
+    <string name="rs2_state">"Select State"</string>
+    <string name="rs2_city">"Select City "</string>
+    <string name="rs2_pincode">"Pincode"</string>
+    <string name="rs2_mypermanent">"My Permanent address is same as current address"</string>
+    <string name="rs2_next">"NEXT"</string>
+    <string name="rs2_year">"Year"</string>
+    <string name="rs2_month">"Month"</string>
+    <string name="rs2_day">"Day"</string>
+
+
+    <!--Document Upload Screen-->
+    <string name="du_header">"Registration"</string>
+    <string name="du_businessdoc">"KYC Documents"</string>
+    <string name="du_gst">"GST Certificate"</string>
+    <string name="du_certification">"IEC Certification"</string>
+    <string name="du_fileupload">"Click to File Upload"</string>
+    <string name="du_maxsize">"Max File Size: 1MB"</string>
+    <string name="du_upload">"Please upload GST/Company PAN/FSSAI License/Any other Documents proof to activate your account either in JPG or PNG format"</string>
+    <string name="du_tin">"TIN Number"</string>
+    <string name="du_pancard">"Company PAN "</string>
+    <string name="du_fssailicense">"FSSAI License No"</string>
+    <string name="du_fssailic">"FSSAI License"</string>
+    <string name="du_unitestablish">"Unit Establishment Number"</string>
+    <string name="du_anyother">"Any Other Document"</string>
+    <string name="du_btnupload">"Add Image"</string>
+    <string name="du_submit">"Submit"</string>
+
+    <!--Registration/Doc Upload Done-->
+    <string name="docdone_header">"Complete User Registration"</string>
+    <string name="docdone_header2">"Thank You for Registering!"</string>
+    <string name="docdone_header3">"We are reviewing your documents."</string>
+    <string name="docdone_header4">"Your account will activate in 24-72 hours once your documents got verified."</string>
+    <string name="docdone_header5">"You will get a confirmation notification on your registered email and contact number."</string>
+
+    <!--Forgot Password Screen-->
+    <string name="fp_headertop">"Change Password"</string>
+    <string name="fp_otpverified">"Your Mobile Number has been Verified Successfully !!"</string>
+    <string name="fp_header">"Enter your registered Mobile Number below to receive OTP"</string>
+    <string name="fp_email">Enter Email ID </string>
+    <string name="fp_submit">Submit</string>
+    <string name="fp_newpassword">Enter New Password</string>
+    <string name="fp_confirmpass">Enter Confirm Password</string>
+    <string name="fp_donemsg">Your password has been changed successfully! Thank You.</string>
+    <string name="fp_donemsgbtn">CONTINUE SHOPPING NOW</string>
+
+    <!--Product Details-->
+    <string name="pd_header">"Product Details"</string>
+    <string name="pd_minorder">"Min Order"</string>
+    <string name="pd_quality">"Quality"</string>
+    <string name="pd_qualitypck">"Quality / Packaging"</string>
+    <string name="pd_shipmentterm">"Shipment Term"</string>
+    <string name="pd_quickdetails">"Quick Details"</string>
+    <string name="pd_itemdescr">"Item Description"</string>
+    <string name="pd_spec">"SPECIFICATION"</string>
+    <string name="pd_moreinfo">"MORE INFO"</string>
+    <string name="pd_addtocart">"ADD TO CART"</string>
+    <string name="pd_buynow">"BUY NOW"</string>
+
+
+    <string-array name="array_specs">
+        <item>Port: Port</item>
+        <item>Payment Terms: COD</item>
+        <item>Supply Ability: 200 Metric Tons Per Month</item>
+        <item>Product Type : Single Herbs &amp; Spices</item>
+        <item>Certification : HACCP</item>
+        <item>Products Name : Organic Cardamom</item>
+        <item>Delivery Details : 6 Days</item>
+        <item>Packaging Details : As Per clients request</item>
+
+    </string-array>
+
+    <string-array name="array_moreinfo">
+        <item>Other Info: Port</item>
+        <item>Other Info: Port</item>
+        <item>Other Info: Port</item>
+        <item>Other Info: Port</item>
+        <item>Other Info: Port</item>
+        <item>Other Info: Port</item>
+        <item>Other Info: Port</item>
+        <item>Other Info: Port</item>
+
+    </string-array>
+
+    <!--Cart Details-->
+    <string name="cd_header">"My Cart"</string>
+    <string name="cd_pincode">"Pincode"</string>
+    <string name="cd_change">"Change"</string>
+    <string name="cd_savelater">"Save for Later"</string>
+    <string name="cd_remove">"Remove"</string>
+    <string name="cd_pricedetails">"Price Details"</string>
+    <string name="cd_price">"Price"</string>
+    <string name="cd_gst">"GST"</string>
+    <string name="cd_delcharg">"Delivery Charges"</string>
+    <string name="cd_vpricedetail">"₹ 20,000.00 \n VIEW PRICE DETAILS"</string>
+    <string name="cd_checkout">"CHECKOUT"</string>
+
+    <!--Add new address-->
+    <string name="ana_header">"Add New Address"</string>
+    <string name="ana_usemy">"USE MY CURRENT LOCATION"</string>
+    <string name="ana_tap">"Tap to auto fill the address fields."</string>
+    <string name="ana_selectcountry">"Select Country *"</string>
+    <string name="ana_pincode">"Pincode *"</string>
+    <string name="ana_city">"City *"</string>
+    <string name="ana_state">"State *"</string>
+    <string name="ana_flath">"Flat/House No./Floor/Building Name *"</string>
+    <string name="ana_locality">"Locality/Colony/Street *"</string>
+    <string name="ana_fullname">"Full Name *"</string>
+    <string name="ana_mobileno">"Mobile Number *"</string>
+    <string name="ana_altmobileno">"Alternate Mobile Number *"</string>
+    <string name="ana_email">"Email ID *"</string>
+    <string name="ana_addtype">"Address Type *"</string>
+    <string name="ana_makedefault">"Make this my default address"</string>
+    <string name="ana_save">"SAVE"</string>
+    <string name="ana_cancel">"CANCEL"</string>
+    <string name="ana_user">"User Name"</string>
+    <string name="ana_mobile">"Mobile Number"</string>
+
+    <!--delivery-->
+    <string name="del_header">"Order Summary"</string>
+    <string name="del_makesure">"Make sure this address is suitable for delivery"</string>
+    <string name="del_change">"CHANGE"</string>
+    <string name="cd_protopay">"PROCEED TO PAY"</string>
+
+    <!--My Account-->
+    <string name="ma_header">"My Account"</string>
+    <string name="ma_advirazone">"Advira Zone"</string>
+    <string name="ma_goadvirazone">"GO TO ADVIRA ZONE"</string>
+    <string name="ma_myorders">"My Orders"</string>
+    <string name="ma_viewmyorders">"VIEW ALL ORDERS"</string>
+    <string name="ma_mywish">"My Wishlist"</string>
+    <string name="ma_viewmywish">"VIEW WISHLIST"</string>
+    <string name="ma_myreviews">"My Reviews"</string>
+    <string name="ma_viewmyreviews">"VIEW ALL REVIEWS"</string>
+    <string name="ma_myaddress">"My Address"</string>
+    <string name="ma_viewmyaddress">"MANAGE ADDRESS"</string>
+    <string name="ma_savedelv">"Save your delivery locations to place your orders faster!"</string>
+    <string name="ma_notifi">"Notifications"</string>
+    <string name="ma_managenotifi">"NOTIFICATIONS PREFERENCES"</string>
+    <string name="ma_cust">"Customer Services"</string>
+    <string name="ma_mysettings">"Account Settings"</string>
+    <string name="ma_managesettings">"MANAGE SETTINGS"</string>
+    <string name="ma_mydetails">"My Details"</string>
+    <string name="ma_viewdetails">"VIEW DETAILS"</string>
+    <string name="ma_logout">"Logout"</string>
+
+
+    <string name="dialog_permission_title">Grant Permissions</string>
+    <string name="dialog_permission_message">This app needs permission to use this feature. You can grant them in app settings.</string>
+    <string name="go_to_settings">GOTO SETTINGS</string>
+    <string name="tv_samplepic">Add Sample Pics</string>
+    <string name="tv_sample">Sample</string>
+    <string name="tv_quality">Quality</string>
+    <string name="msg_error_unable_select_profile_pic">Unable to set profile image. Please try again!</string>
+    <string name="lbl_set_profile_photo">Set Image</string>
+    <string name="lbl_take_camera_picture">Take a picture</string>
+    <string name="lbl_choose_from_gallery">Choose from gallery</string>
+    <string name="toast_image_intent_null">Image picker option is missing!</string>
+    <string name="lbl_insect_photo">Select Insect image</string>
+    <string name="description1">Buying farm fresh produce made easy and relishing</string>
+    <string name="description2">Harvesting/Plucking will start based on your TOKRI orders received.</string>
+    <string name="description3">Natural or Organic veggies reach to your kitchen within 24hrs of harvesting/plucking.</string>
+    <string name="farmertobusiness">Welcome to ADVIRA Business, where agri commodity trade made transparent &#38; traceable for “FARMERS” and “BUSINESS”.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="membership_title">Advira</string>
+    <string name="membership_title1">Elite Green</string>
+    <string name="plan_99">Join 3 month of Elite at\nRs.99/-</string>
+    <string name="plan_149">Join 6 month of Elite at\nRs.149/-</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="rate_app_title">Rate App</string>
+    <string name="rate_app_message">If you are enjoying our app, please take a moment to rate it on PlayStore. Thanks for your support!</string>
+    <string name="rate_btn_pos">Rate Now</string>
+    <string name="rate_btn_neg">Remind me later</string>
+    <string name="rate_btn_nut">No, Thanks</string>
+    <string name="add_to_cart">ADD TO CART</string>
+    <string name="add_item">+</string>
+    <string name="remove_item">-</string>
+
+</resources>

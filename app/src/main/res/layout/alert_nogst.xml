@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp">
+
+        <TextView
+            android:id="@+id/textmsg"
+            style="@style/txt_style_heading5d"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="(This declaration should be completed by the proprietor, partner, director and/or authorized signatory, who has the authority to do so)\n
+        \n
+        I/We do hereby declare that we are not covered under the ambit of GST and are not required to obtain registration or comply with GST procedures and formalities. Additionally, we also confirm that taxes applied on the invoices will be paid as per the governing law.\n
+        \n
+        We acknowledge that information furnished above on ADVIRA digital platform are true to the best of our knowledge and that we shall be bound by the acts of duly constituted attorney. In case any of the above information is found to be incorrect at a later date, my registration shall be liable to be cancelled and my any payment shall be withheld by Advira Technomanagement Private Limited and any unprocessed transaction shall remain withheld by the company.\n
+        \n
+        We also undertake the responsibility to inform all subsequent changes in the constitution or working of firm, affecting the accuracy of the answers given will be promptly communicated to your Organization." />
+
+        <EditText
+            android:id="@+id/et_nogstname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter name *" />
+
+        <TextView
+            android:id="@+id/tv_nogstname"
+            style="@style/txt_style_heading5d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="test"
+            android:textAlignment="textEnd"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>
